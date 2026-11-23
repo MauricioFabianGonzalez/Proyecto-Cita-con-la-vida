@@ -326,6 +326,7 @@
     });
     $('quiz-restart').textContent=quizMode==='family'?'¡Nueva competencia! ↻':quizMode==='review'?'Otra revancha ↻':'Otra ronda de 10 ↻';
     updateReviewOption();
+    show('quiz-review-now',sessionMistakes.size>0);
     focusTitle('quiz-result-title');
   }
   function passTurn(){
@@ -349,6 +350,20 @@
     questionIndex++;
     if(quizMode==='family')passTurn();
     else renderQuestion();
+  });
+  $('quiz-change-mode').addEventListener('click',()=>{
+    show('quiz-end',false);show('quiz-active',false);show('quiz-start',true);
+    updateReviewOption();
+    syncQuizMode();
+    $('quiz-begin').focus({preventScroll:true});
+    $('quiz-start').scrollIntoView({behavior:'auto',block:'start'});
+  });
+  $('quiz-review-now').addEventListener('click',()=>{
+    const choice=modeInputs.find(x=>x.value==='review');
+    if(!choice||!sessionMistakes.size)return;
+    choice.checked=true;
+    syncQuizMode();
+    beginQuiz();
   });
   $('quiz-share').addEventListener('click',async()=>{
     const url=new URL('juegos.html#espadeo',location.href).href;
