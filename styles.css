@@ -112,3 +112,21 @@ html{scroll-padding-top:112px}
 #photo-number{display:block;color:#b2beac;margin-top:6px}
 .to-top{position:fixed;z-index:24;bottom:22px;right:20px;background:#dfac86;color:#16271d;border:0;border-radius:50%;width:46px;height:46px;font-size:22px;cursor:pointer;box-shadow:0 8px 22px #0003}
 @media(max-width:620px){.sermon-filters,.gallery-toolbar{gap:6px}.sermon-filter,.gallery-filter{padding:8px 10px;font-size:11px}.gallery-item .gallery-caption{font-size:10px;padding:24px 9px 11px}.gallery-zoom{width:27px;height:27px;top:8px;right:8px}.lightbox-wrap{padding:9px}.lightbox-photo-wrap{height:67dvh}.to-top{right:12px;bottom:12px}}
+
+/* Propuesta pastoral interactiva: acceso rápido a los devocionales y oración */
+.top-special-links{display:flex;gap:18px;align-items:center}
+.top-special-links a{white-space:nowrap}
+.daily-teaser{background:#e8ecdf;border-bottom:1px solid #cad5c6;padding:18px 0}
+.daily-teaser-inner{display:flex;align-items:center;gap:25px}
+.daily-teaser-inner>img{width:118px;height:122px;object-fit:contain;flex:0 0 118px}
+.daily-teaser-text{flex:1;min-width:0}
+.daily-teaser-text>span{color:#986e4e;font-size:10px;font-weight:800;letter-spacing:.14em}
+.daily-teaser h2{font:800 clamp(22px,2.8vw,37px)/1.18 'Manrope',sans-serif;letter-spacing:-.05em;margin:7px 0}
+.daily-teaser h2 em{font-style:normal;color:#b07b5c}
+.daily-teaser p{margin:0;color:#617066;font-size:13px;line-height:1.7}
+.daily-teaser-buttons{display:flex;flex-direction:column;gap:9px}
+.daily-teaser-buttons .button{padding:13px 16px;white-space:nowrap}
+.button-soft{background:#fffaf3;color:#20382a}
+.button-soft:hover{background:#f7e7d4}
+@media(max-width:980px){.daily-teaser-inner{flex-wrap:wrap}.daily-teaser-buttons{flex-direction:row;flex-basis:100%;justify-content:center}.top-special-links{gap:12px}}
+@media(max-width:620px){.daily-teaser{padding:20px 0}.daily-teaser-inner{align-items:center;gap:12px}.daily-teaser-inner>img{width:75px;height:82px;flex:0 0 75px}.daily-teaser-text>span{font-size:8px}.daily-teaser h2{font-size:22px}.daily-teaser p{font-size:12px}.daily-teaser-buttons{flex-direction:column;align-items:stretch}.daily-teaser-buttons .button{width:100%;justify-content:center}.top-special-links{gap:8px}.top-special-links a{font-size:9px}.top-inner{gap:8px}}
