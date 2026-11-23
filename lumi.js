@@ -61,10 +61,18 @@
   const toggle = container.querySelector('#lumi-toggle');
   const message = container.querySelector('#lumi-message');
   const onGamesPage = window.location.pathname.endsWith('/juegos.html');
+  const onPortalHome = window.location.pathname.endsWith('/index.html')
+    || window.location.pathname.endsWith('/Proyecto-Cita-con-la-vida/')
+    || window.location.pathname === '/';
   if (onGamesPage) {
     message.textContent = '¡Bienvenido a mis juegos! Estoy listo para ponerte a prueba. 😄';
     const question = container.querySelector('.lumi-question');
     if (question) question.textContent = '¿Espadeo o adivinanza? ¡Vos elegís!';
+  }
+  if (onPortalHome) {
+    message.textContent = '¡Hola, soy Lumi! 💛 Bienvenido a Cita con la Vida. ¿Querés jugar o conocer la iglesia?';
+    const question = container.querySelector('.lumi-question');
+    if (question) question.textContent = 'Tengo un desafío bíblico para vos. ¿Te animás?';
   }
   const reducedMotion = window.matchMedia
     ? window.matchMedia('(prefers-reduced-motion: reduce)')
@@ -136,7 +144,7 @@
 
   toggle.addEventListener('click', () => {
     if (panel.hidden) {
-      message.textContent = onGamesPage ? '¡Otra ronda juntos! ¿Qué juego te gustaría probar?' : '¡Qué bueno verte! ¿Querés leer el devocional o dejar un motivo de oración?';
+      message.textContent = onGamesPage ? '¡Otra ronda juntos! ¿Qué juego te gustaría probar?' : onPortalHome ? '¡Qué bueno que volviste! ¿Te desafío a jugar o preferís leer un devocional? 💛' : '¡Qué bueno verte! ¿Querés leer el devocional o dejar un motivo de oración?';
       showPanel();
     } else {
       minimizePanel();
@@ -210,9 +218,14 @@
   } else {
     minimizePanel();
   }
+  // La portada incluye una versión HTML que funciona sin JS.
+  // Ocultarla únicamente al terminar de instalar el widget interactivo.
+  const htmlBackup = document.getElementById('lumi-home-fallback');
+  if (htmlBackup) htmlBackup.remove();
+
   // Construcción 3D gratuita en tiempo real; no usa API de pago.
   // Si WebGL, la red o el navegador fallan, la imagen 2D sigue siendo accesible.
-  import('./lumi-3d.js?v=2')
+  import('./lumi-3d.js?v=3')
     .then(({mountLumi3D})=>mountLumi3D(toggle,reducedMotion))
     .catch(()=>{ /* respaldo 2D intencional */ });
 
