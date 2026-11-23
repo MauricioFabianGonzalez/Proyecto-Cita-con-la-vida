@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#172b21">
+<meta name="description" content="Jugá con Lumi: Espadeo Bíblico con 300 preguntas y Lumi Adivina con 97 personajes bíblicos. Dos juegos gratuitos para aprender y divertirse. Cita con la Vida Trelew.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Jugá con Lumi | Cita con la Vida Trelew">
+<meta property="og:description" content="¡Aceptá el desafío! 10 preguntas al azar de un banco de 300 y un juego para adivinar tu personaje bíblico.">
+<meta property="og:image" content="https://gcdn.picsart.com/picsart-mcp/81dbfa93-12fe-4f3b-98a0-89cafc6671b2.png">
+<meta property="og:locale" content="es_AR">
+<link rel="canonical" href="https://mauriciofabiangonzalez.github.io/Proyecto-Cita-con-la-vida/juegos.html">
+<link rel="icon" href="https://gcdn.picsart.com/picsart-mcp/58b03c67-48f5-4c1a-afce-b814bc7481e7.png" type="image/png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css?v=20261123-share">
+<link rel="stylesheet" href="juegos.css?v=1">
+<link rel="stylesheet" href="lumi.css?v=4">
+<title>Jugá con Lumi · Cita con la Vida Trelew</title>
+</head>
+<body class="games-page">
+<a class="skip-link" href="#contenido">Saltar al contenido</a>
+<header class="games-header">
+  <div class="container games-header-content">
+    <a class="games-brand" href="index.html" aria-label="Cita con la Vida Trelew, volver al inicio">
+      <img src="https://gcdn.picsart.com/picsart-mcp/5b1519b4-4a74-46a9-807d-4b735596d02c.png" alt="Cita con la Vida Trelew" width="166" height="78">
+    </a>
+    <div class="games-header-links">
+      <a href="index.html">← Volver a la iglesia</a>
+      <a href="devocional.html" class="games-top-link">Devocional diario ↗</a>
+    </div>
+  </div>
+</header>
+<main id="contenido">
+  <section class="games-hero" aria-labelledby="games-title">
+    <div class="container games-hero-grid">
+      <div>
+        <div class="games-eyebrow"><span class="games-sparkle">✳</span> UNA AVENTURA CON LA PALABRA</div>
+        <h1 id="games-title">¡Lumi te <em>desafía!</em></h1>
+        <p>Aprender de la Biblia también puede ser divertido. Probá cuánto sabés o dejá que Lumi intente adivinar en quién estás pensando.</p>
+        <div class="games-highlights">
+          <span><strong>300</strong> preguntas bíblicas</span>
+          <span><strong>10</strong> por partida</span>
+          <span><strong>97</strong> personajes</span>
+        </div>
+      </div>
+      <div class="games-hero-mascot">
+        <div class="games-hello">¡Hola! Soy Lumi. ¿Te animás a jugar conmigo? <span aria-hidden="true">♡</span></div>
+        <img src="https://gcdn.picsart.com/picsart-mcp/81dbfa93-12fe-4f3b-98a0-89cafc6671b2.png" width="224" height="240" alt="Lumi, la mascota de Cita con la Vida, saludando">
+      </div>
+    </div>
+  </section>
+  <section class="games-main container" aria-label="Elegí tu juego">
+    <div class="games-choice" role="tablist" aria-label="Juegos de Lumi">
+      <button type="button" class="game-tab" role="tab" id="tab-quiz" aria-controls="panel-quiz" aria-selected="true">
+        <span class="game-tab-icon" aria-hidden="true">⚔️</span><span><strong>Espadeo Bíblico</strong><small>¿Cuánto sabés?</small></span>
+      </button>
+      <button type="button" class="game-tab" role="tab" id="tab-adivina" aria-controls="panel-adivina" aria-selected="false" tabindex="-1">
+        <span class="game-tab-icon" aria-hidden="true">🔍</span><span><strong>Lumi adivina</strong><small>¡Pensá en alguien!</small></span>
+      </button>
+    </div>
+
+    <section class="game-panel" id="panel-quiz" role="tabpanel" aria-labelledby="tab-quiz">
+      <div id="quiz-start" class="game-state">
+        <div class="games-section-label">EL DESAFÍO DE LAS 10 PREGUNTAS</div>
+        <h2>¿Listo para el <em>espadeo bíblico?</em></h2>
+        <p class="games-lead">Vas a recibir <strong>10 preguntas elegidas al azar de un banco de 300</strong>. Cada una tiene 4 opciones. Al responder, conocés la solución y dónde encontrarla en la Biblia.</p>
+        <div class="game-rules">
+          <span>✓ Una sola respuesta por pregunta</span>
+          <span>✓ Sin cronómetro ni presión</span>
+          <span>✓ Devolución simpática al final</span>
+        </div>
+        <div class="games-start-actions">
+          <button type="button" class="games-button games-button-primary" id="quiz-begin">¡Acepto el desafío! <span aria-hidden="true">→</span></button>
+          <small>Jugá todas las veces que quieras. No se guardan tus respuestas.</small>
+        </div>
+      </div>
+      <div id="quiz-active" class="game-state" hidden>
+        <div class="game-status-row">
+          <span class="games-section-label" id="quiz-counter">PREGUNTA 1 DE 10</span>
+          <span class="games-score" id="quiz-score" aria-live="polite">0 aciertos</span>
+        </div>
+        <div class="games-progress" role="progressbar" aria-label="Progreso del espadeo" aria-valuemin="0" aria-valuemax="10" aria-valuenow="0" id="quiz-progress"><span></span></div>
+        <span class="game-topic" id="quiz-topic"></span>
+        <h2 id="quiz-question" tabindex="-1">Pregunta</h2>
+        <div class="quiz-options" id="quiz-options" role="group" aria-label="Opciones de respuesta"></div>
+        <div class="quiz-feedback" id="quiz-feedback" aria-live="polite" hidden></div>
+        <div class="game-next-bar"><button type="button" class="games-button games-button-primary" id="quiz-next" hidden>Continuar <span aria-hidden="true">→</span></button></div>
+      </div>
+      <div id="quiz-end" class="game-state" hidden>
+        <div class="games-section-label">¡MISIÓN CUMPLIDA!</div>
+        <div class="result-medallion" aria-hidden="true">✳</div>
+        <h2 id="quiz-result-title" tabindex="-1"></h2>
+        <p class="result-score" id="quiz-result-score"></p>
+        <p class="games-lead" id="quiz-result-text"></p>
+        <h3 class="review-title">Tu repaso bíblico</h3>
+        <div id="quiz-review" class="quiz-review"></div>
+        <div class="games-end-actions">
+          <button type="button" class="games-button games-button-primary" id="quiz-restart">Otra ronda de 10 ↻</button>
+          <button type="button" class="games-button games-button-outline" id="quiz-share">Compartir mi resultado ↗</button>
+        </div>
+        <p class="game-small-feedback" id="quiz-share-status" role="status"></p>
+      </div>
+    </section>
+
+    <section class="game-panel" id="panel-adivina" role="tabpanel" aria-labelledby="tab-adivina" hidden>
+      <div id="guess-start" class="game-state">
+        <div class="games-section-label">EL MISTERIO DE LOS PERSONAJES BÍBLICOS</div>
+        <h2>¡Pensá en alguien y <em>Lumi lo adivina!</em></h2>
+        <p class="games-lead">Elegí mentalmente un personaje de la Biblia. Respondé algunas preguntas con sinceridad y Lumi intentará descubrirlo entre <strong>97 personajes conocidos</strong>.</p>
+        <div class="game-rules">
+          <span>✓ Pensalo sin decir su nombre</span>
+          <span>✓ Respondé sí, no, probablemente o no sé</span>
+          <span>✓ Si no estás seguro, elegí «No sé»</span>
+        </div>
+        <div class="games-start-actions">
+          <button type="button" class="games-button games-button-primary" id="guess-begin">¡Ya tengo mi personaje! <span aria-hidden="true">→</span></button>
+          <small>Lumi usa pistas y deducciones, no lee tu mente. Puede equivocarse.</small>
+        </div>
+      </div>
+      <div id="guess-active" class="game-state" hidden>
+        <div class="game-status-row">
+          <span class="games-section-label" id="guess-counter">PREGUNTA 1</span>
+          <span class="games-score" id="guess-remaining">Pensando…</span>
+        </div>
+        <div class="games-progress" role="progressbar" aria-label="Progreso de Lumi adivina" aria-valuemin="0" aria-valuemax="18" aria-valuenow="0" id="guess-progress"><span></span></div>
+        <p class="guess-speaker">Lumi pregunta <span aria-hidden="true">✳</span></p>
+        <h2 id="guess-question" tabindex="-1">¿Es tu personaje...?</h2>
+        <div id="guess-answers" class="guess-options" role="group" aria-label="Tu respuesta">
+          <button type="button" data-answer="si">Sí</button>
+          <button type="button" data-answer="probable">Probablemente</button>
+          <button type="button" data-answer="no">No</button>
+          <button type="button" data-answer="nose">No sé</button>
+        </div>
+        <button type="button" class="guess-back" id="guess-back">← Volver a la pregunta anterior</button>
+      </div>
+      <div id="guess-final" class="game-state" hidden>
+        <div class="games-section-label">EL GRAN MOMENTO</div>
+        <p class="guess-speaker">Lumi tiene una sospecha… ✳</p>
+        <h2 id="guess-title" tabindex="-1">¿Estás pensando en…?</h2>
+        <div class="guess-result">
+          <span class="guess-result-icon" aria-hidden="true">🔎</span>
+          <strong id="guess-character"></strong>
+          <p id="guess-hint"></p>
+          <span class="guess-reference" id="guess-reference"></span>
+        </div>
+        <div class="games-end-actions" id="guess-confirm-actions">
+          <button type="button" class="games-button games-button-primary" id="guess-yes">¡Sí, acertaste! 🎉</button>
+          <button type="button" class="games-button games-button-outline" id="guess-no">No era ese 😅</button>
+        </div>
+        <div id="guess-epilogue" hidden>
+          <p class="games-lead" id="guess-epilogue-message" aria-live="polite"></p>
+          <button type="button" class="games-button games-button-primary" id="guess-again">Jugar otra vez ↻</button>
+        </div>
+      </div>
+    </section>
+    <p class="games-footnote">Las respuestas incluyen pasajes para consultar la Biblia. Esta actividad es educativa y recreativa: no reemplaza la lectura ni el estudio bíblico.</p>
+  </section>
+  <section class="games-outro">
+    <div class="container games-outro-inner">
+      <div><span>SEGUIMOS CRECIENDO JUNTOS</span><h2>Hay una historia nueva <em>para descubrir.</em></h2><p>Terminaste de jugar, pero siempre podés seguir aprendiendo y compartiendo la Palabra.</p></div>
+      <a class="games-button games-button-outline-light" href="devocional.html">Leer el devocional de hoy ↗</a>
+    </div>
+  </section>
+</main>
+<footer class="footer"><div class="container">
+  <div class="footer-main">
+    <div><a href="index.html" class="brand footer-brand"><img class="brand-logo footer-logo" src="https://gcdn.picsart.com/picsart-mcp/4aa0b9cb-4cb3-4f32-b053-f3ee54ca201c.png" alt="Cita con la Vida Trelew" width="176" height="85"></a><p>Una comunidad para creer, crecer y caminar juntos.</p></div>
+    <div class="footer-links"><div><strong>EXPLORÁ</strong><a href="index.html">Inicio</a><a href="index.html#mensajes">Prédicas</a><a href="devocional.html">Devocional</a></div><div><strong>CONECTÁ</strong><a href="oracion.html">Motivo de oración</a><a href="https://www.facebook.com/share/1QXsKamLuy/" target="_blank" rel="noopener noreferrer">Facebook ↗</a></div></div>
+  </div>
+  <div class="footer-bottom"><span>© 2026 Cita con la Vida · Trelew</span><span>Juegos bíblicos con Lumi</span></div>
+</div></footer>
+<script src="juego-preguntas-1.js" defer></script>
+<script src="juego-preguntas-2.js" defer></script>
+<script src="juego-preguntas-3.js" defer></script>
+<script src="juego-personajes.js" defer></script>
+<script src="juegos.js?v=1" defer></script>
+<script src="lumi.js?v=4" defer></script>
+</body></html>
