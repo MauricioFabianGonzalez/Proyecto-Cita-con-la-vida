@@ -3,7 +3,7 @@
  */
 export async function mountLumi3D(toggle, reducedMotion) {
   if (!toggle || !window.WebGLRenderingContext) return false;
-  const THREE = await import('https://cdn.jsdelivr.net/npm/three@0.160.1/build/three.module.js');
+  const THREE = await import('./vendor/three.module.min.js');
   const canvas = document.createElement('canvas');
   canvas.className = 'lumi-3d-canvas';
   canvas.setAttribute('aria-hidden','true');
@@ -12,7 +12,7 @@ export async function mountLumi3D(toggle, reducedMotion) {
     renderer = new THREE.WebGLRenderer({canvas,alpha:true,antialias:true,powerPreference:'low-power'});
   } catch (_) { return false; }
   renderer.setClearColor(0,0);
-  renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1,1.5));
+  renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1,1.3));
   renderer.outputColorSpace=THREE.SRGBColorSpace;
   renderer.toneMapping=THREE.ACESFilmicToneMapping;
   renderer.toneMappingExposure=1.5;
