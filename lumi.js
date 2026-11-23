@@ -50,6 +50,7 @@
     '<button type="button" class="lumi-toggle" id="lumi-toggle" aria-label="Abrir las opciones de Lumi"',
       ' aria-controls="lumi-panel" aria-expanded="false" title="Hablar con Lumi">',
       '<img src="' + IMAGE + '" alt="Lumi, mascota amigable de la iglesia" width="78" height="78">',
+      '<span class="lumi-nameplate" aria-hidden="true">Lumi ✨</span>',
       '<span class="lumi-badge" aria-hidden="true"></span>',
     '</button>'
   ].join('');
