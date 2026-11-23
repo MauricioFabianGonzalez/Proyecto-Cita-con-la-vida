@@ -72,9 +72,30 @@
           <span>✓ Sin cronómetro ni presión</span>
           <span>✓ Devolución simpática al final</span>
         </div>
+        <fieldset class="quiz-mode-fieldset" id="quiz-mode-fieldset">
+          <legend>Elegí cómo querés jugar</legend>
+          <div class="quiz-mode-grid">
+            <label class="quiz-mode-option"><input type="radio" name="quiz-mode" value="classic" checked><span class="quiz-mode-icon" aria-hidden="true">⚔️</span><span><strong>Clásico</strong><small>10 preguntas de los 300 desafíos</small></span></label>
+            <label class="quiz-mode-option"><input type="radio" name="quiz-mode" value="kids"><span class="quiz-mode-icon" aria-hidden="true">🌈</span><span><strong>Infantil</strong><small>10 preguntas sencillas, sin apuro</small></span></label>
+            <label class="quiz-mode-option"><input type="radio" name="quiz-mode" value="family"><span class="quiz-mode-icon" aria-hidden="true">👨‍👩‍👧‍👦</span><span><strong>En familia</strong><small>De 2 a 4 jugadores, por turnos</small></span></label>
+            <label class="quiz-mode-option" id="quiz-review-choice" hidden><input type="radio" name="quiz-mode" value="review"><span class="quiz-mode-icon" aria-hidden="true">📖</span><span><strong>Mi revancha</strong><small id="quiz-review-label">Repasá las que te costaron</small></span></label>
+          </div>
+        </fieldset>
+        <div id="quiz-family-setup" class="quiz-family-setup" hidden>
+          <label for="quiz-player-count">¿Cuántos van a jugar?</label>
+          <select id="quiz-player-count"><option value="2">2 jugadores</option><option value="3">3 jugadores</option><option value="4">4 jugadores</option></select>
+          <p>Pasen el celular al terminar cada turno. Cada jugador tendrá 10 preguntas diferentes de dificultad comparable.</p>
+          <div class="quiz-player-names" id="quiz-player-names">
+            <label>Jugador 1 <input type="text" class="quiz-player-name" maxlength="24" placeholder="Jugador 1" autocomplete="off"></label>
+            <label>Jugador 2 <input type="text" class="quiz-player-name" maxlength="24" placeholder="Jugador 2" autocomplete="off"></label>
+            <label hidden>Jugador 3 <input type="text" class="quiz-player-name" maxlength="24" placeholder="Jugador 3" autocomplete="off"></label>
+            <label hidden>Jugador 4 <input type="text" class="quiz-player-name" maxlength="24" placeholder="Jugador 4" autocomplete="off"></label>
+          </div>
+        </div>
+        <p id="quiz-mode-description" class="quiz-mode-description" role="status">Diez preguntas al azar, respuestas y referencias bíblicas para aprender.</p>
         <div class="games-start-actions">
           <button type="button" class="games-button games-button-primary" id="quiz-begin">¡Acepto el desafío! <span aria-hidden="true">→</span></button>
-          <small>Jugá todas las veces que quieras. No se guardan tus respuestas.</small>
+          <small>Jugá todas las veces que quieras. Las respuestas se quedan en tu navegador; los nombres no se guardan.</small>
         </div>
       </div>
       <div id="quiz-active" class="game-state" hidden>
@@ -83,11 +104,19 @@
           <span class="games-score" id="quiz-score" aria-live="polite">0 aciertos</span>
         </div>
         <div class="games-progress" role="progressbar" aria-label="Progreso del espadeo" aria-valuemin="0" aria-valuemax="10" aria-valuenow="0" id="quiz-progress"><span></span></div>
+        <div class="quiz-family-board" id="quiz-family-board" hidden aria-label="Marcador familiar"></div>
         <span class="game-topic" id="quiz-topic"></span>
         <h2 id="quiz-question" tabindex="-1">Pregunta</h2>
         <div class="quiz-options" id="quiz-options" role="group" aria-label="Opciones de respuesta"></div>
         <div class="quiz-feedback" id="quiz-feedback" aria-live="polite" hidden></div>
         <div class="game-next-bar"><button type="button" class="games-button games-button-primary" id="quiz-next" hidden>Continuar <span aria-hidden="true">→</span></button></div>
+        <div id="quiz-handoff" class="quiz-handoff" hidden role="group" aria-label="Cambio de jugador">
+          <div class="quiz-handoff-icon" aria-hidden="true">🤝</div>
+          <div class="games-section-label">CAMBIO DE TURNO</div>
+          <h2 id="quiz-handoff-title">¡Le toca a otro jugador!</h2>
+          <p>Pasale el celular a la próxima persona. Cuando lo tenga, puede descubrir su pregunta.</p>
+          <button type="button" class="games-button games-button-primary" id="quiz-handoff-ready">¡Lo tengo! Mostrar pregunta →</button>
+        </div>
       </div>
       <div id="quiz-end" class="game-state" hidden>
         <div class="games-section-label">¡MISIÓN CUMPLIDA!</div>
@@ -95,6 +124,7 @@
         <h2 id="quiz-result-title" tabindex="-1"></h2>
         <p class="result-score" id="quiz-result-score"></p>
         <p class="games-lead" id="quiz-result-text"></p>
+        <div id="quiz-family-results" class="quiz-family-results" hidden></div>
         <h3 class="review-title">Tu repaso bíblico</h3>
         <div id="quiz-review" class="quiz-review"></div>
         <div class="games-end-actions">
