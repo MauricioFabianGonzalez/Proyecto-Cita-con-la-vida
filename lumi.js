@@ -40,6 +40,7 @@
         '<div class="lumi-actions">',
           '<a class="lumi-action lumi-action-primary" href="devocional.html"><span>Leer el devocional de hoy</span><span aria-hidden="true">↗</span></a>',
           '<a class="lumi-action lumi-action-secondary" href="oracion.html"><span>Dejar un motivo de oración</span><span aria-hidden="true">♡</span></a>',
+          '<a class="lumi-action lumi-action-tertiary" href="index.html#mensajes"><span>Explorar las prédicas</span><span aria-hidden="true">→</span></a>',
         '</div>',
         '<button type="button" class="lumi-later" data-lumi-action="min">Ahora no, gracias</button>',
       '</div>',
@@ -180,7 +181,7 @@
   }
   // Construcción 3D gratuita en tiempo real; no usa API de pago.
   // Si WebGL, la red o el navegador fallan, la imagen 2D sigue siendo accesible.
-  import('./lumi-3d.js?v=1')
+  import('./lumi-3d.js?v=2')
     .then(({mountLumi3D})=>mountLumi3D(toggle,reducedMotion))
     .catch(()=>{ /* respaldo 2D intencional */ });
 
