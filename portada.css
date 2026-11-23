@@ -74,6 +74,11 @@ img{max-width:100%;height:auto}
 .link-card.featured-devotional{background:#fff9ec;border-color:#ead9bf}
 .featured-devotional .card-media{background:#f0e8c8}
 .link-card.game-highlight{background:#f2f5ea;border-color:#ccdcbf}
+.link-card.campaign-highlight{background:linear-gradient(115deg,#f8efdb,#e5f0df);border:1.5px solid #d8c6a0;box-shadow:0 10px 26px #5b502417}
+.campaign-highlight .card-media{background:linear-gradient(145deg,#eed9b6,#b9d4b9);color:#36553b}
+.campaign-highlight .card-label strong{color:#28513c;font-size:16px}
+.campaign-highlight .mini-tag{color:#976941}
+.campaign-highlight .card-arrow{color:#8d7044}
 .game-highlight .card-media{background:#e7edd7}
 .lumi-avatar img{object-fit:contain;width:95%;height:95%}
 .closing-card{margin-top:22px;display:flex;align-items:center;gap:15px;padding:25px 24px;min-height:166px;border-radius:20px;border:1px solid #b5cbb6;background:radial-gradient(circle at 90% 30%,#98b29658,transparent 45%),linear-gradient(125deg,#dcebdd,#f6efe4);box-shadow:0 9px 27px #2646330d}
