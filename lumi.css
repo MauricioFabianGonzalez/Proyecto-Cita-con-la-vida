@@ -313,3 +313,10 @@ body.lumi-visible .to-top:not([hidden]) {right:125px;}
   .lumi-panel {width:calc(100vw - 18px);}
   body.lumi-visible .to-top:not([hidden]) {right:95px;}
 }
+
+
+/* Invitaciones de Lumi a Espadeo Bíblico y Lumi Adivina. */
+.lumi-action-play{color:#3b5638!important;background:#edf3e8;border:1px solid #d4e3ca}
+.lumi-action-play:hover{background:#dceace}
+.lumi-panel{max-height:min(565px,calc(100dvh - 132px))}
+@media(max-width:620px){.lumi-panel{max-height:min(540px,calc(100dvh - 124px))}}
