@@ -361,7 +361,7 @@
   $('quiz-review-now').addEventListener('click',()=>{
     const choice=modeInputs.find(x=>x.value==='review');
     if(!choice||!sessionMistakes.size)return;
-    choice.checked=true;
+    modeInputs.forEach(input=>{input.checked=input===choice;});
     syncQuizMode();
     beginQuiz();
   });
