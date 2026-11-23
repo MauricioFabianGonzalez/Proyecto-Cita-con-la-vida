@@ -104,3 +104,22 @@ No hay cuentas, dinero, anuncios ni almacenamiento de nombres de jugadores. El m
 - **enlaces.html**, **enlaces.css** y **enlaces.js** forman una página de enlaces para compartir por redes, con un perfil institucional de Cita con la Vida y botones grandes.
 - La portada **index.html** suma una sección «Tu próximo paso, a un toque», sin eliminar los apartados existentes sobre pastores, comunidad, fotos y prédicas.
 - Horarios y dirección exacta no se publican mientras no estén confirmados por la iglesia. Los enlaces de eventos remiten a la página oficial de Facebook para consultar novedades.
+
+
+## IMPORTANTE: nueva portada principal basada en el Linktree de Camino de Vida
+
+Actualización 23/11/2026: se respondió a la observación del usuario de que el rediseño anterior **no modelaba la portada real**.
+
+- **index.html** es ahora la **portada principal con diseño tipo Linktree**: fotografía de la congregación, insignia con logo, nombre, mensaje de bienvenida, botones sociales y **tarjetas verticales grandes agrupadas por «Siguiente paso», «Eventos», «Escribinos», «Recursos para crecer», «Sé parte» y «Jugá con Lumi»**.
+- **portada.css** y **portada.js** implementan el diseño adaptable y el botón de compartir.
+- **comunidad.html** conserva el sitio institucional detallado anterior, con todos los contenidos, fotografías, pastores, prédicas, galería y acceso a visitas.
+- **enlaces.html** ahora redirige a la portada principal: una única experiencia de entrada, sin un Linktree secundario incoherente.
+- Todos los enlaces a las secciones de la web completa deben apuntar a \`comunidad.html#seccion\`, no a \`index.html#seccion\`.
+- La referencia de inspiración es \`https://linktr.ee/caminodevida\`: se tomó su arquitectura de navegación, **no su marca, fotografías, eventos, horarios ni contenido**.
+- No se publican horarios/dirección o canales de redes que la iglesia no haya confirmado. «Eventos» se vincula a la página de Facebook que compartió la comunidad.
+- Se conservan todos los juegos y las páginas interiores. No se usa backend ni servicio de pago.
+
+**Enlaces para revisar:**
+- Página principal: https://mauriciofabiangonzalez.github.io/Proyecto-Cita-con-la-vida/
+- Página institucional completa: https://mauriciofabiangonzalez.github.io/Proyecto-Cita-con-la-vida/comunidad.html
+- Juegos: https://mauriciofabiangonzalez.github.io/Proyecto-Cita-con-la-vida/juegos.html
