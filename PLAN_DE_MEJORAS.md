@@ -84,5 +84,19 @@ No guardar pedidos sensibles en GitHub público.
 - [ ] Validar visualmente en Chrome Android y Safari iOS.
 - [ ] Revisar las 300 preguntas con la traducción bíblica preferida de la iglesia y el equipo pastoral.
 - [ ] Añadir más personajes, especialmente mujeres y figuras menos conocidas, con pistas revisadas.
-- [ ] Si se desea: niveles por edades, modo equipos para reuniones y seguimiento de rachas **solo local**, sin datos personales.
+- [x] Modo infantil y modo familiar por turnos con 2–4 participantes, pantalla de pase, marcador y devolución.
+- [x] Repaso temporal de preguntas falladas y posibilidad de cambiar de modo desde los resultados.
+- [ ] Evaluar modo equipos para grupos grandes y rachas solo locales sin datos personales.
 - [ ] Agregar voz a Lumi únicamente si hay consentimiento explícito de reproducción y un recurso de voz seguro.
+
+
+## Inspiración Camino de Vida / Linktree — cambios implementados
+
+- [x] Revisar la referencia pública https://linktr.ee/caminodevida y sus categorías de navegación.
+- [x] Crear **enlaces.html** como landing de enlaces de Cita con la Vida, con logo, datos reales y secciones claras.
+- [x] Ordenar **siguiente paso, recursos para crecer, juegos, oración/contacto y comunidad** sin copiar los servicios de la iglesia de referencia.
+- [x] Sumar a **index.html** un bloque destacado de accesos rápidos y un enlace directo al hub.
+- [x] Diseñar componentes para celular, teclado y vista previa social.
+- [ ] Confirmar con responsables la dirección, los horarios y el canal institucional de WhatsApp; agregarlos luego al hub y a la página de primera visita.
+- [ ] Obtener enlaces oficiales de transmisiones y predicaciones, si están disponibles, para agregarlos sin enlaces inventados.
+- [ ] Realizar una revisión visual final en Chrome Android/Safari y validar la accesibilidad con lectores de pantalla.
