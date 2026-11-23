@@ -73,3 +73,16 @@ No guardar pedidos sensibles en GitHub público.
 3. Agregar enlaces oficiales a prédicas y calendario.
 4. Diseñar recepción segura para motivos de oración.
 5. Evolucionar Lumi a un personaje 3D más fiel.
+
+
+## Módulo nuevo: juegos bíblicos con Lumi (implementado el 23/11/2026)
+
+- [x] Espadeo Bíblico: 300 preguntas bíblicas, 15 temas, partidas de 10 con referencias, puntaje y devolución.
+- [x] Juego de adivinanza: 97 personajes, 63 rasgos y preguntas adaptativas sin IA de pago.
+- [x] Inicio, menú móvil, pie y panel de Lumi enlazan con los dos juegos.
+- [x] Navegación por teclado, modo de movimiento reducido y diseño para celulares.
+- [ ] Validar visualmente en Chrome Android y Safari iOS.
+- [ ] Revisar las 300 preguntas con la traducción bíblica preferida de la iglesia y el equipo pastoral.
+- [ ] Añadir más personajes, especialmente mujeres y figuras menos conocidas, con pistas revisadas.
+- [ ] Si se desea: niveles por edades, modo equipos para reuniones y seguimiento de rachas **solo local**, sin datos personales.
+- [ ] Agregar voz a Lumi únicamente si hay consentimiento explícito de reproducción y un recurso de voz seguro.
