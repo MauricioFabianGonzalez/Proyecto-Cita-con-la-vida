@@ -47,3 +47,12 @@ No hay herramientas de seguimiento ni cookies, no hay compilación obligatoria y
 ## Identidad visual oficial
 
 En noviembre de 2026 se sustituyó el distintivo genérico anterior por el logo oficial en negro (encabezado) y blanco (pie), sin redibujarlo ni modificar sus letras. También se cambió el favicon. Las variantes recortadas están guardadas en Picsart Drive, con enlaces duraderos desde el sitio.
+
+## Lumi: devocionales diarios y oración (noviembre de 2026)
+
+- Personaje original **Lumi**, mascota flotante cálida sin símbolos religiosos ajenos al logo oficial, con bienvenida de primera visita, minimizar y cerrar por sesión.
+- lumi.js y lumi.css: se cargan en todas las páginas; la mascota se mantiene en pantalla al desplazarse.
+- devocional.html, devocional-page.js, devocionales.js: lectura diaria por fecha de Argentina. Se usa devocional-hoy.json cuando corresponde al día y, si no, 21 devocionales originales de respaldo en rotación automática. No reproduce citas bíblicas literales.
+- oracion.html y oracion-page.js: formulario de preparación de motivos sin almacenamiento ni backend. El visitante debe copiar y mandar personalmente el texto por mensaje privado a Facebook. Nunca se afirma que ya fue enviado.
+- Para un buzón que reciba pedidos de forma directa hace falta configurar un canal de recepción propio de la iglesia. Nunca publicar motivos privados en repositorios públicos.
+- Los archivos estáticos no escriben material nuevo en GitHub. La rotación por fecha funciona sin intervención, mientras que nuevas lecturas requieren actualización de devocional-hoy.json por un proceso programado autorizado.
