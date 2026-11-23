@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://mauriciofabiangonzalez.github.io/Proyecto-Cita-con-la-vida/sitemap.xml
