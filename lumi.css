@@ -320,3 +320,14 @@ body.lumi-visible .to-top:not([hidden]) {right:125px;}
 .lumi-action-play:hover{background:#dceace}
 .lumi-panel{max-height:min(565px,calc(100dvh - 132px))}
 @media(max-width:620px){.lumi-panel{max-height:min(540px,calc(100dvh - 124px))}}
+
+
+/* Etiqueta permanente de Lumi v8 */
+.lumi-toggle .lumi-nameplate{
+  position:absolute;z-index:4;left:50%;bottom:-7px;transform:translateX(-50%);
+  padding:4px 9px;border-radius:999px;background:#fff8e9;
+  box-shadow:0 3px 10px rgba(33,49,36,.2);
+  border:1px solid #e7d9bb;color:#294a35;
+  font:800 11px/1.1 'Manrope',sans-serif;white-space:nowrap;
+  pointer-events:none;
+}
