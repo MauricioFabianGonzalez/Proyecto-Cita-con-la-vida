@@ -32,3 +32,14 @@ Sitio institucional inicial para la comunidad de la iglesia Cita con la Vida, Tr
 ## Comprobaciones
 
 No hay herramientas de seguimiento ni cookies, no hay compilación obligatoria y los enlaces externos usan `rel="noopener noreferrer"`.
+
+
+## Actualización — fotografías y mensajes
+
+- Portada, tarjetas comunitarias, perfil de los pastores y galería con fotografías enviadas por la iglesia en noviembre de 2026.
+- Las imágenes originales se alojan mediante enlaces HTTPS de Picsart Drive (copias duraderas). Conservar copias de respaldo y considerar migrarlas al propio repositorio más adelante.
+- Una imagen adicional está identificada expresamente como recreación artística generada con IA. No representa documentalmente un culto.
+- Archivo de 9 prédicas con resúmenes editoriales y preguntas de reflexión, basado en los análisis previamente trabajados por la comunidad: Pastora Zulma y Pastor Pablo. Algunas fechas o nombres de predicador no se consignan por falta de confirmación.
+- La foto del afiche de Santa Cena es material histórico, no una convocatoria actual.
+- Facebook se enlaza mediante la URL compartida más recientemente por el usuario.
+- El símbolo circular del encabezado sigue siendo provisional. Dirección y horarios se mantienen pendientes de confirmación.
