@@ -304,7 +304,7 @@
     } else {
       const [title,body]=messageFor(correctCount);
       $('quiz-result-title').textContent=title;
-      $('quiz-result-score').textContent=correctCount+' de '+selectedQuestions.length+' respuestas correctas · '+Math.round(correctCount/selectedQuestions.length*100)+'%';
+      $('quiz-result-score').textContent=correctCount+'/'+selectedQuestions.length+' · '+Math.round(correctCount/selectedQuestions.length*100)+'% de aciertos';
       $('quiz-result-text').textContent=body;
       board.hidden=true;
       $('quiz-review').previousElementSibling.textContent='Tu repaso bíblico';
