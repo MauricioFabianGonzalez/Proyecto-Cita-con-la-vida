@@ -123,3 +123,17 @@ Actualización 23/11/2026: se respondió a la observación del usuario de que el
 - Página principal: https://mauriciofabiangonzalez.github.io/Proyecto-Cita-con-la-vida/
 - Página institucional completa: https://mauriciofabiangonzalez.github.io/Proyecto-Cita-con-la-vida/comunidad.html
 - Juegos: https://mauriciofabiangonzalez.github.io/Proyecto-Cita-con-la-vida/juegos.html
+
+## Un M³ de Esperanza · proyecto de ampliación (23/11/2026)
+
+La página [esperanza.html](esperanza.html) presenta la iniciativa de ampliación y remodelación hacia el local lindero de **Cita con la Vida – Trelew**, con el lema «Un espacio más. Una familia más. Una vida más.».
+
+- Meta inicial: **50 bolsas de cemento de 25 kg** (la representación de 50 bloques es **ilustrativa y no un contador de acopio real**).
+- Las ofrendas se coordinan con referencia a **Perrén y Cía.**, cuenta de acopio **86009**, titular informado **Mauricio Gonzáles**, WhatsApp de coordinación **+54 9 280 497-6659**.
+- El valor acopiado puede convertirse al retiro en otros materiales equivalentes para la obra, según valores vigentes.
+- **El valor histórico de $8.900 por bolsa de mayo de 2026 NO se publica como precio vigente.** Antes de participar, los visitantes deben confirmar los datos de cuenta, condiciones y valores con el equipo.
+- Selector de cantidad (1, 2, 3, 5, 10, 20 u otra) prepara un mensaje de WhatsApp. **No procesa pagos, registra contribuciones ni dispone de backend.**
+- Acceso directo desde el grupo «Sé parte» de la portada `index.html` y los enlaces de `comunidad.html`.
+- No publicar avances numéricos mientras no exista una actualización comprobada del acopio de materiales.
+
+**Enlace:** https://mauriciofabiangonzalez.github.io/Proyecto-Cita-con-la-vida/esperanza.html
