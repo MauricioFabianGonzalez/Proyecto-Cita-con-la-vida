@@ -76,7 +76,7 @@ La página **[Jugá con Lumi](juegos.html)** reúne dos minijuegos gratuitos:
 - \`juego-preguntas-1.js\`, \`juego-preguntas-2.js\`, \`juego-preguntas-3.js\`: 100 preguntas en cada archivo.
 - \`juego-personajes.js\`: personajes y rasgos de deducción.
 
-No hay clasificación de usuarios, competencia, dinero, anuncios ni almacenamiento de las respuestas. Las preguntas se pueden editar sin modificar el motor de juego. Los textos son para enseñanza recreativa; se recomienda contrastar todas las referencias con la traducción bíblica usada por la comunidad.
+No hay cuentas, dinero, anuncios ni almacenamiento de nombres de jugadores. El modo familiar solo muestra un marcador durante la partida. Las preguntas falladas se guardan temporalmente en sessionStorage del navegador para la revancha; no se envían a servidores. Las preguntas se pueden editar sin modificar el motor de juego. Los textos son para enseñanza recreativa; se recomienda contrastar todas las referencias con la traducción bíblica usada por la comunidad.
 
 ### Comprobaciones efectuadas
 - Total de preguntas: 300, todas con 4 alternativas diferentes y referencia.
@@ -85,3 +85,22 @@ No hay clasificación de usuarios, competencia, dinero, anuncios ni almacenamien
 - En simulaciones con respuestas ideales, el adivinador identificó 97 de 97 personajes de su propia colección.
 - JavaScript analizado sintácticamente. **La prueba visual en dispositivos y la publicación de GitHub Pages deben confirmarse en navegador real.**
 
+
+
+## Modos nuevos de Espadeo Bíblico · 23/11/2026
+
+- **Clásico:** diez preguntas aleatorias, cuatro opciones, devoluciones y repaso.
+- **Infantil:** diez preguntas de dificultad inicial, botones más grandes, mensajes alentadores y sin cronómetro.
+- **En familia:** de dos a cuatro jugadores, con diez preguntas diferentes para cada persona, distribuidas con 5 fáciles, 4 intermedias y 1 difícil por jugador. Se alternan los turnos, con pantalla de pase del celular, marcador y ganador/empate.
+- **Revancha de errores:** permite repasar hasta diez preguntas falladas, dentro de la misma sesión del navegador. Cuando la respuesta es correcta, esa pregunta sale de la lista de errores.
+- Al terminar se puede **repetir la modalidad, cambiar de modo o repasar los errores**.
+- Los nombres escritos para el juego familiar no se guardan; los errores se mantienen solo en sessionStorage y se descartan al terminar la sesión de pestaña o navegador.
+
+## Diseño inspirado en el Linktree de Camino de Vida
+
+- Referencia de organización: https://linktr.ee/caminodevida
+- El proyecto **no copia contenidos, ministerios, agenda, fotografías ni identidad visual de Camino de Vida**.
+- Se aprovechó la idea de agrupar los accesos por **siguiente paso, recursos, juegos, contacto y comunidad**.
+- **enlaces.html**, **enlaces.css** y **enlaces.js** forman una página de enlaces para compartir por redes, con un perfil institucional de Cita con la Vida y botones grandes.
+- La portada **index.html** suma una sección «Tu próximo paso, a un toque», sin eliminar los apartados existentes sobre pastores, comunidad, fotos y prédicas.
+- Horarios y dirección exacta no se publican mientras no estén confirmados por la iglesia. Los enlaces de eventos remiten a la página oficial de Facebook para consultar novedades.
