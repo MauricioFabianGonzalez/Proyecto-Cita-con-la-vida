@@ -268,3 +268,48 @@ body.lumi-visible .to-top:not([hidden]) { right: 106px; }
 @media (prefers-reduced-motion: reduce) {
   .lumi-toggle .lumi-3d-canvas { transition:none; }
 }
+
+
+/* Lumi 3D móvil (v4): más presencia visual sin tapar el contenido. */
+.lumi-action-tertiary {
+  background:#f6f3ed;
+  color:#294133!important;
+  border:1px solid #d8e0d5;
+}
+.lumi-action-tertiary:hover {background:#e8eee6;}
+.lumi-toggle {
+  width:98px;
+  height:106px;
+}
+.lumi-toggle::before {
+  content:"";
+  position:absolute;
+  z-index:-1;
+  pointer-events:none;
+  left:13%;
+  right:10%;
+  bottom:5%;
+  height:30%;
+  border-radius:50%;
+  background:radial-gradient(ellipse,rgba(253,190,92,.25),rgba(243,172,83,0) 72%);
+  filter:blur(9px);
+}
+.lumi-toggle.lumi-3d-active {
+  filter:drop-shadow(0 8px 12px rgba(48,35,20,.2));
+}
+.lumi-toggle.lumi-3d-active .lumi-3d-canvas {image-rendering:auto;}
+body.lumi-visible .to-top:not([hidden]) {right:125px;}
+@media (max-width:620px) {
+  .lumi-toggle {width:89px;height:98px;}
+  .lumi-widget {right:8px;bottom:calc(9px + env(safe-area-inset-bottom,0px));}
+  .lumi-panel {
+    max-height:min(460px,calc(100dvh - 120px));
+    overscroll-behavior:contain;
+  }
+  body.lumi-visible .to-top:not([hidden]){right:106px;}
+}
+@media (max-width:370px) {
+  .lumi-toggle {width:78px;height:87px;}
+  .lumi-panel {width:calc(100vw - 18px);}
+  body.lumi-visible .to-top:not([hidden]) {right:95px;}
+}
