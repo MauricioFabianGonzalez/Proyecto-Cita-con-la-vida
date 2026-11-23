@@ -97,9 +97,73 @@ img{max-width:100%;height:auto}
 .cita-portal .lumi-widget .lumi-icon-btn{cursor:pointer}
 .cita-portal .lumi-widget .lumi-nameplate{position:absolute;z-index:4;bottom:-8px;left:50%;transform:translateX(-50%);padding:4px 8px;border-radius:50px;background:#fff6e8;color:#254631;border:1px solid #e4d6b9;font-weight:800;font-size:11px;box-shadow:0 4px 13px #0002;white-space:nowrap;pointer-events:none}
 
+/* Lumi de la portada: única mascota visible, independiente del JavaScript. */
+body.cita-portal{overflow-x:clip}
+body.cita-portal #lumi-home-fallback{
+  position:fixed!important;right:11px!important;bottom:calc(14px + env(safe-area-inset-bottom,0px))!important;
+  top:auto!important;left:auto!important;width:102px!important;height:111px!important;
+  max-width:none!important;max-height:none!important;z-index:2147483000!important;
+  isolation:isolate;display:block!important;overflow:visible!important;
+  pointer-events:auto!important;filter:none;
+}
+body.cita-portal #lumi-home-fallback>summary{
+  position:relative!important;display:block!important;width:102px!important;height:111px!important;
+  min-height:0!important;overflow:visible!important;padding:0!important;margin:0!important;
+  cursor:pointer;list-style:none;background:transparent!important;border:0!important;
+  outline-offset:4px;
+}
+body.cita-portal #lumi-home-fallback>summary::-webkit-details-marker{display:none}
+body.cita-portal #lumi-home-fallback>summary>img{
+  display:block!important;width:100px!important;height:104px!important;
+  max-width:none!important;object-fit:contain!important;
+  filter:drop-shadow(0 8px 10px rgba(68,45,14,.35));
+  animation:lumi-fallback-float 3.2s ease-in-out infinite;
+}
+body.cita-portal #lumi-home-fallback .lumi-home-label{
+  position:absolute;z-index:4;bottom:0;right:18px;
+  background:#fff8e9;border:1px solid #e7d2ab;color:#2b5439;
+  padding:4px 10px;border-radius:999px;white-space:nowrap;
+  font:800 11px/1.2 'Manrope',system-ui,sans-serif;
+  box-shadow:0 4px 13px rgba(36,39,18,.21);pointer-events:none;
+}
+body.cita-portal #lumi-home-fallback .lumi-home-hint{
+  position:absolute;bottom:calc(100% - 19px);right:77px;width:139px;
+  max-width:139px;z-index:3;padding:9px 12px;background:#fff9ed;
+  color:#32553c;border:1px solid #ead4b4;border-radius:13px;
+  box-shadow:0 5px 16px rgba(35,40,24,.23);font-size:11px;
+  font-weight:800;line-height:1.4;pointer-events:none;
+}
+body.cita-portal #lumi-home-fallback[open] .lumi-home-hint{display:none!important}
+body.cita-portal #lumi-home-fallback>.lumi-fallback-panel{
+  display:block!important;position:absolute!important;right:0!important;
+  bottom:calc(100% + 11px)!important;top:auto!important;left:auto!important;
+  width:min(350px,calc(100vw - 22px))!important;
+  max-height:min(520px,calc(100dvh - 155px))!important;
+  min-width:0!important;overflow-y:auto;overscroll-behavior:contain;
+  padding:18px!important;margin:0!important;order:unset!important;
+  z-index:6;pointer-events:auto!important;
+  border-radius:17px;background:#fffcf7;color:#253b2d;
+  border:1px solid #e2ddcf;box-shadow:0 16px 50px rgba(25,43,26,.32);
+}
+body.cita-portal #lumi-home-fallback:not([open])>.lumi-fallback-panel{display:none!important}
+body.cita-portal #lumi-home-fallback summary .lumi-3d-canvas{
+  position:absolute;inset:0;width:100%!important;height:100%!important;
+  pointer-events:none;display:block;opacity:0;z-index:2;background:transparent;
+}
+body.cita-portal #lumi-home-fallback summary.lumi-3d-active .lumi-3d-canvas{opacity:1}
+body.cita-portal #lumi-home-fallback summary.lumi-3d-active>img{opacity:.22}
+@media(max-width:390px){
+  body.cita-portal #lumi-home-fallback{right:7px!important;bottom:calc(8px + env(safe-area-inset-bottom,0px))!important}
+  body.cita-portal #lumi-home-fallback .lumi-home-hint{right:73px;width:120px;font-size:10px}
+}
+@media(prefers-reduced-motion:reduce){
+  body.cita-portal #lumi-home-fallback>summary>img{animation:none!important}
+}
+
+
 </style>
     <link rel="stylesheet" href="portada.css?v=2">
-  <link rel="stylesheet" href="lumi.css?v=9">
+  <link rel="stylesheet" href="lumi.css?v=10">
   <title>Cita con la Vida – Trelew | Estamos acá para vos</title>
 </head>
 <body class="cita-portal">
@@ -200,7 +264,7 @@ img{max-width:100%;height:auto}
   <details id="lumi-home-fallback" class="lumi-home-fallback" aria-label="Lumi, acompañante de Cita con la Vida">
     <summary aria-label="Abrir o cerrar las opciones de Lumi">
       <span class="lumi-home-hint">¡Hola! Soy Lumi. ¿Jugamos? ✨</span>
-      <img src="https://gcdn.picsart.com/picsart-mcp/81dbfa93-12fe-4f3b-98a0-89cafc6671b2.png" alt="Lumi, mascota de la iglesia" width="84" height="86">
+      <img src="https://gcdn.picsart.com/picsart-mcp/81dbfa93-12fe-4f3b-98a0-89cafc6671b2.png" onerror="this.onerror=null;this.src='assets/lumi-respaldo.svg'" alt="Lumi, mascota de la iglesia" width="100" height="104" fetchpriority="high"><span class="lumi-home-label" aria-hidden="true">Lumi ✨</span>
     </summary>
     <div class="lumi-fallback-panel">
       <h2>¡Hola, soy Lumi! 💛</h2>
@@ -214,6 +278,6 @@ img{max-width:100%;height:auto}
   </details>
 
   <script src="portada.js?v=1" defer></script>
-  <script src="lumi.js?v=9" defer></script>
+  <script src="lumi-home.js?v=1" defer></script>
 </body>
 </html>
