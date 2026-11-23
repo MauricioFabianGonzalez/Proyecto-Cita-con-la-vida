@@ -114,6 +114,7 @@
     const right = choice === q.correcta;
     if (right) correctCount++;
     answerLog.push({question:q,chosen:choice,correct:right});
+    window.dispatchEvent(new CustomEvent('cita-lumi-reaccion', { detail:{tipo:right?'acierto':'intento'} }));
     $('quiz-score').textContent = correctCount + (correctCount === 1 ? ' acierto' : ' aciertos');
     for(const button of $('quiz-options').querySelectorAll('button')) {
       button.disabled = true;
@@ -150,6 +151,7 @@
     $('quiz-result-title').textContent = title;
     $('quiz-result-score').textContent = correctCount + ' de 10 respuestas correctas · ' + (correctCount * 10) + '%';
     $('quiz-result-text').textContent = body;
+    if (correctCount >= 7) window.dispatchEvent(new CustomEvent('cita-lumi-reaccion', { detail:{tipo:'celebrar'} }));
     $('quiz-share-status').textContent = '';
     const wrap = $('quiz-review');
     wrap.replaceChildren();
@@ -252,6 +254,7 @@
     $('guess-character').textContent=currentGuess.nombre;
     $('guess-hint').textContent=currentGuess.pista;
     $('guess-reference').textContent='Pista bíblica: '+currentGuess.referencia;
+    window.dispatchEvent(new CustomEvent('cita-lumi-reaccion', { detail:{tipo:'sospecha'} }));
     show('guess-confirm-actions',true);
     show('guess-epilogue',false);
     focusTitle('guess-title');
@@ -316,6 +319,7 @@
     show('guess-confirm-actions',false);
     $('guess-title').textContent='¡Lo sabía! Bueno… ¡casi magia! ✨';
     $('guess-epilogue-message').textContent='¡Acerté con '+currentGuess.nombre+'! Gracias por jugar. Leé su historia en '+currentGuess.referencia+' y desafiame de nuevo.';
+    window.dispatchEvent(new CustomEvent('cita-lumi-reaccion', { detail:{tipo:'celebrar'} }));
     show('guess-epilogue',true);
     focusTitle('guess-title');
   });
