@@ -40,7 +40,7 @@
         '<div class="lumi-actions">',
           '<a class="lumi-action lumi-action-primary" href="devocional.html"><span>Leer el devocional de hoy</span><span aria-hidden="true">↗</span></a>',
           '<a class="lumi-action lumi-action-secondary" href="oracion.html"><span>Dejar un motivo de oración</span><span aria-hidden="true">♡</span></a>',
-          '<a class="lumi-action lumi-action-tertiary" href="index.html#mensajes"><span>Explorar las prédicas</span><span aria-hidden="true">→</span></a>',
+          '<a class="lumi-action lumi-action-tertiary" href="comunidad.html#mensajes"><span>Explorar las prédicas</span><span aria-hidden="true">→</span></a>',
           '<a class="lumi-action lumi-action-play" href="juegos.html#espadeo"><span>⚔️ ¡Te desafío al espadeo!</span><span aria-hidden="true">↗</span></a>',
           '<a class="lumi-action lumi-action-play" href="juegos.html#adivina"><span>🔍 Pensá en un personaje</span><span aria-hidden="true">↗</span></a>',
         '</div>',
