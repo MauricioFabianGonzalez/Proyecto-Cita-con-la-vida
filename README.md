@@ -1,58 +1,52 @@
 # Cita con la Vida · Trelew
 
-Sitio institucional inicial para la comunidad de la iglesia Cita con la Vida, Trelew (Chubut, Argentina).
+Sitio web público de la comunidad **Cita con la Vida – Trelew**, Chubut, Argentina.
 
-## Estado
+**Web:** https://mauriciofabiangonzalez.github.io/Proyecto-Cita-con-la-vida/
 
-**Versión de diseño inicial**, realizada con HTML, CSS y JavaScript nativos. No reutiliza código ni fotografías de otros proyectos. Funciona como sitio estático y puede publicarse mediante GitHub Pages sin instalar dependencias.
+Este proyecto es independiente de cualquier otro repositorio. Se publica como sitio estático en GitHub Pages, sin cuotas de alojamiento propias ni backend.
 
-## Para publicar en GitHub Pages
+## Qué ofrece
 
-1. Subir todos los archivos a la raíz del repositorio público (incluida la carpeta `assets`).
-2. Abrir **Settings → Pages → Build and deployment**.
-3. Elegir **Deploy from a branch**, seleccionar `main` y `/ (root)`.
-4. Guardar y abrir la URL que indique GitHub Pages.
+- Portada con fotografías aportadas por la comunidad y diseño adaptable a celulares.
+- Secciones de nuestra iglesia, comunidad, pastores y galería fotográfica con filtros.
+- Archivo de **9 prédicas**: resúmenes editoriales previamente trabajados, filtros temáticos, búsqueda, preguntas de reflexión y enlaces para compartir cada prédica.
+- **Devocionales diarios**: `devocional.html`, con una lectura por fecha argentina y contenido de respaldo si falla la actualización de `devocional-hoy.json`.
+- **Motivos de oración**: `oracion.html` prepara un texto para enviarlo por mensaje privado a Facebook. **No hay envío automático ni almacenamiento en el sitio**.
+- **Lumi**, acompañante visual con accesos a devocionales, oración y prédicas. Permanece visible aun cuando se cierra el panel.
 
-## Información que debe verificar la iglesia antes de publicar como sitio definitivo
+## Lumi 3D — versión experimental para celulares
 
-- Confirmar **URL oficial de Facebook**. La URL de share proporcionada no pudo consultarse automáticamente y se utiliza temporalmente como vínculo.
-- **Logo oficial incorporado** al encabezado, al pie y a la pestaña del navegador, a partir de la fotografía original enviada por la iglesia (recortada y preparada sobre transparencia).
-- Añadir **fotos auténticas de la comunidad** autorizadas para publicar (no se inventaron fotos ni se usaron imágenes de otras congregaciones).
-- Confirmar **dirección exacta, mapa y horarios**. No se incluyen datos antiguos ni horarios no verificados.
-- Confirmar textos institucionales y los títulos de prédicas: “Mantené tu fe ardiendo”, “Fructificar en el desierto” y “El poder del equipo” corresponden a títulos compartidos previamente en la preparación de contenidos de la iglesia, pero deben enlazarse a sus publicaciones oficiales.
-- Incorporar WhatsApp/email oficiales cuando se confirme su titularidad. No hay formulario sin backend ni se solicitan datos personales sin destino real.
+- `lumi.js`: interacción, bienvenida y estado minimizado.
+- `lumi.css`: panel accesible, diseño responsive y alternativa animada por CSS.
+- `lumi-3d.js`: figura geométrica 3D animada mediante WebGL y Three.js. Mueve brazos, ojos, cabeza y cuerpo de forma independiente.
+- `vendor/three.module.min.js`: copia local de **Three.js r160**, distribuida bajo licencia MIT (véase `vendor/THREE-LICENSE.txt`). La figura **no depende de un CDN externo para descargar Three.js**.
+- Si WebGL no está disponible o falla la carga, se mantiene la imagen original en 2D. En dispositivos que solicitan reducción de movimiento, se respetan esas preferencias.
+- Esta Lumi es un **personaje geométrico 3D inspirado en la ilustración**, no un modelo GLB esculpido idéntico. La apariencia y el rendimiento deben probarse en un teléfono real.
 
-## Personalizar
+## Identidad y contenido
 
-- `index.html`: textos, enlaces, secciones y etiquetas SEO.
-- `styles.css`: colores, diseño y diseño responsive.
-- `script.js`: menú móvil, actualización de año y animaciones de aparición.
-- `assets/favicon.svg`: distintivo temporal, no es logo oficial.
+Las fotografías, piezas gráficas y referencias de las prédicas fueron proporcionadas por la iglesia o elaboradas en el proceso editorial con ella. Las **recreaciones generadas con IA se indican como tales** y no deben presentarse como imágenes documentales de eventos.
 
-## Comprobaciones
+Los elementos alojados en Picsart se enlazan por HTTPS. Conviene mantener copias de los originales y migrarlos más adelante a un almacenamiento definitivo que controle la iglesia.
 
-No hay herramientas de seguimiento ni cookies, no hay compilación obligatoria y los enlaces externos usan `rel="noopener noreferrer"`.
+**Pendiente de confirmar antes de publicitar horarios y servicios:** dirección actual, horarios habituales, contacto oficial, nombre de ministerios, enlaces directos a transmisiones y autorización para publicar imágenes de personas (especialmente menores). Un afiche histórico no confirma horarios actuales.
 
+## Archivos principales
 
-## Actualización — fotografías y mensajes
+- `index.html`, `styles.css`, `script.js`: página principal, filtros, galería, búsqueda y enlaces para compartir.
+- `devocional.html`, `devocional-page.js`, `devocionales.js`, `devocional-hoy.json`: lecturas diarias.
+- `oracion.html`, `oracion-page.js`, `bienestar.css`: preparación del motivo de oración y páginas interiores.
+- `lumi.js`, `lumi.css`, `lumi-3d.js`, `vendor/three.module.min.js`: personaje.
+- `sitemap.xml`, `robots.txt`: ayuda para buscadores.
+- `PLAN_DE_MEJORAS.md`: prioridades propuestas.
 
-- Portada, tarjetas comunitarias, perfil de los pastores y galería con fotografías enviadas por la iglesia en noviembre de 2026.
-- Las imágenes originales se alojan mediante enlaces HTTPS de Picsart Drive (copias duraderas). Conservar copias de respaldo y considerar migrarlas al propio repositorio más adelante.
-- Una imagen adicional está identificada expresamente como recreación artística generada con IA. No representa documentalmente un culto.
-- Archivo de 9 prédicas con resúmenes editoriales y preguntas de reflexión, basado en los análisis previamente trabajados por la comunidad: Pastora Zulma y Pastor Pablo. Algunas fechas o nombres de predicador no se consignan por falta de confirmación.
-- La foto del afiche de Santa Cena es material histórico, no una convocatoria actual.
-- Facebook se enlaza mediante la URL compartida más recientemente por el usuario.
-- El símbolo circular del encabezado sigue siendo provisional. Dirección y horarios se mantienen pendientes de confirmación.
+## Publicación
 
-## Identidad visual oficial
+El repositorio debe permanecer público para su publicación gratuita mediante GitHub Pages en esta configuración. Ajuste recomendado: **Settings → Pages → Deploy from a branch → main → / (root)**.
 
-En noviembre de 2026 se sustituyó el distintivo genérico anterior por el logo oficial en negro (encabezado) y blanco (pie), sin redibujarlo ni modificar sus letras. También se cambió el favicon. Las variantes recortadas están guardadas en Picsart Drive, con enlaces duraderos desde el sitio.
+El primer despliegue o una actualización pueden tardar en reflejarse en el sitio público. Si Chrome conserva una versión anterior, utilizar una recarga o una ventana privada. No se requiere instalación, suscripciones pagas ni clave de API para Lumi.
 
-## Lumi: devocionales diarios y oración (noviembre de 2026)
+## Privacidad y accesibilidad
 
-- Personaje original **Lumi**, mascota flotante cálida sin símbolos religiosos ajenos al logo oficial, con bienvenida de primera visita, minimizar y cerrar por sesión.
-- lumi.js y lumi.css: se cargan en todas las páginas; la mascota se mantiene en pantalla al desplazarse.
-- devocional.html, devocional-page.js, devocionales.js: lectura diaria por fecha de Argentina. Se usa devocional-hoy.json cuando corresponde al día y, si no, 21 devocionales originales de respaldo en rotación automática. No reproduce citas bíblicas literales.
-- oracion.html y oracion-page.js: formulario de preparación de motivos sin almacenamiento ni backend. El visitante debe copiar y mandar personalmente el texto por mensaje privado a Facebook. Nunca se afirma que ya fue enviado.
-- Para un buzón que reciba pedidos de forma directa hace falta configurar un canal de recepción propio de la iglesia. Nunca publicar motivos privados en repositorios públicos.
-- Los archivos estáticos no escriben material nuevo en GitHub. La rotación por fecha funciona sin intervención, mientras que nuevas lecturas requieren actualización de devocional-hoy.json por un proceso programado autorizado.
+La web no utiliza sistemas de rastreo propios. La mascota no graba, no escucha y no envía datos. El formulario de oración no guarda pedidos en un repositorio. Se incluyen enlaces con etiquetas, teclado y opción de reducir animaciones. El 3D se degrada a 2D si la capacidad gráfica es insuficiente.
