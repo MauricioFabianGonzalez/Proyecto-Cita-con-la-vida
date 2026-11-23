@@ -178,4 +178,10 @@
   } else {
     minimizePanel();
   }
+  // Construcción 3D gratuita en tiempo real; no usa API de pago.
+  // Si WebGL, la red o el navegador fallan, la imagen 2D sigue siendo accesible.
+  import('./lumi-3d.js?v=1')
+    .then(({mountLumi3D})=>mountLumi3D(toggle,reducedMotion))
+    .catch(()=>{ /* respaldo 2D intencional */ });
+
 })();
