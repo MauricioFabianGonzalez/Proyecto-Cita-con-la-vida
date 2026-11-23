@@ -175,6 +175,29 @@
     reducedMotion.addEventListener('change', scheduleIdle);
   }
 
+
+  // Reacciones a los juegos: el personaje se mueve sin sonidos ni interrupciones.
+  let reactionTimer = null;
+  window.addEventListener('cita-lumi-reaccion', (event) => {
+    if (reducedMotion.matches || document.hidden) return;
+    const reactions = {
+      acierto: {state:'wave',text:'¡Muy bien! ¡Qué linda respuesta! ✨'},
+      intento: {state:'look',text:'¡Casi! Lo importante es seguir aprendiendo. 💛'},
+      celebrar: {state:'wave',text:'¡Qué buena partida! ¡Me encantó jugar con vos! 🎉'},
+      sospecha: {state:'look',text:'Mmm… creo que ya sé en quién estás pensando. 🔍'}
+    };
+    const reaction = reactions[event.detail?.tipo];
+    if (!reaction) return;
+    clearIdle();
+    window.clearTimeout(reactionTimer);
+    container.dataset.state = reaction.state;
+    if (!panel.hidden) message.textContent = reaction.text;
+    reactionTimer = window.setTimeout(() => {
+      if (panel.hidden) scheduleIdle();
+      else container.dataset.state = 'float';
+    }, 1700);
+  });
+
   // La bienvenida aparece solo una vez; en visitas posteriores se respeta si estaba abierta.
   if (getPreference(STORAGE_WELCOME) !== '1') {
     savePreference(STORAGE_WELCOME, '1');
