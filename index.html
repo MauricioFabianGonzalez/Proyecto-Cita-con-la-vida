@@ -58,8 +58,46 @@ img{max-width:100%;height:auto}
 .cita-portal .skip-link{position:absolute;top:-200px}
 .cita-portal .skip-link:focus{top:5px}
 </style>
-  <link rel="stylesheet" href="portada.css?v=2">
-  <link rel="stylesheet" href="lumi.css?v=5">
+  <style>
+/* Lumi siempre presente. Este bloque es independiente de archivos CSS externos. */
+.cita-portal .lumi-home-fallback{
+  position:fixed;right:12px;bottom:calc(12px + env(safe-area-inset-bottom,0px));
+  width:min(338px,calc(100vw - 24px));z-index:10050;
+  font-family:system-ui,-apple-system,sans-serif;
+  color:#253b2d;pointer-events:none;display:flex;flex-direction:column;align-items:flex-end;gap:8px;
+}
+.cita-portal .lumi-home-fallback summary{pointer-events:auto;display:flex;align-items:center;justify-content:flex-end;gap:8px;cursor:pointer;list-style:none;min-height:87px;padding:3px 4px;background:none;border:0;user-select:none}
+.cita-portal .lumi-home-fallback summary::-webkit-details-marker{display:none}
+.cita-portal .lumi-home-fallback summary::marker{display:none}
+.cita-portal .lumi-home-fallback summary img{width:84px;height:86px;object-fit:contain;filter:drop-shadow(0 7px 11px #252b2455);animation:lumi-fallback-float 3.4s ease-in-out infinite}
+.cita-portal .lumi-home-hint{background:#fff9ed;border:1px solid #ead4b4;color:#2d503c;box-shadow:0 8px 21px #162a1b32;border-radius:14px;padding:9px 11px;font-weight:750;font-size:12px;line-height:1.35;max-width:150px;text-align:center}
+.cita-portal .lumi-home-fallback[open] .lumi-home-hint{display:none}
+.cita-portal .lumi-fallback-panel{pointer-events:auto;width:100%;padding:16px;border-radius:17px;background:#fffcf6;border:1px solid #dfdfd4;box-shadow:0 18px 44px #15291b50;order:-1}
+.cita-portal .lumi-fallback-panel h2{font-size:18px;letter-spacing:-.03em;margin:0 0 8px;color:#254331}
+.cita-portal .lumi-fallback-panel p{font-size:13px;line-height:1.55;margin:0 0 12px;color:#526655}
+.cita-portal .lumi-fallback-panel a{display:block;padding:11px 12px;border-radius:9px;background:#eaf1e6;color:#254c34;font-weight:750;font-size:13px;line-height:1.4;margin-top:7px}
+.cita-portal .lumi-fallback-panel a:first-of-type{background:#234733;color:#fff}
+.cita-portal .lumi-fallback-panel a:focus-visible,.cita-portal .lumi-home-fallback summary:focus-visible{outline:3px solid #d6935f;outline-offset:3px}
+@keyframes lumi-fallback-float{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
+@media(max-width:470px){.cita-portal .lumi-home-hint{max-width:130px;font-size:11px}.cita-portal .lumi-home-fallback summary img{width:77px;height:80px}}
+@media(prefers-reduced-motion:reduce){.cita-portal .lumi-home-fallback summary img{animation:none}}
+/* Visibilidad esencial del widget 3D incluso si lumi.css no responde. */
+.cita-portal .lumi-widget{position:fixed;right:11px;bottom:calc(11px + env(safe-area-inset-bottom,0px));z-index:10060;display:flex;flex-direction:column;align-items:flex-end;max-width:calc(100vw - 22px);gap:9px}
+.cita-portal .lumi-widget .lumi-toggle{width:88px;height:95px;position:relative;background:transparent;border:0;cursor:pointer;padding:0}
+.cita-portal .lumi-widget .lumi-toggle>img{display:block;width:100%;height:100%;object-fit:contain}
+.cita-portal .lumi-widget .lumi-3d-canvas{position:absolute;inset:0;width:100%;height:100%;z-index:1;opacity:0;pointer-events:none}
+.cita-portal .lumi-widget .lumi-toggle.lumi-3d-active>.lumi-3d-canvas{opacity:1}
+.cita-portal .lumi-widget .lumi-toggle.lumi-3d-active>img{opacity:0}
+.cita-portal .lumi-widget .lumi-panel{width:min(350px,calc(100vw - 22px));max-height:min(540px,calc(100dvh - 120px));overflow-y:auto;background:#fffcf6;border:1px solid #e1e2d6;border-radius:18px;box-shadow:0 16px 44px #10271b55;color:#254331}
+.cita-portal .lumi-widget .lumi-panel[hidden]{display:none}
+.cita-portal .lumi-widget .lumi-action{display:flex;gap:10px;justify-content:space-between;padding:11px 14px;border-radius:9px;background:#edf3e9;color:#294b34;font-size:13px;font-weight:750;text-decoration:none;margin-bottom:8px}
+.cita-portal .lumi-widget .lumi-action-primary{background:#234a33;color:#fff}
+.cita-portal .lumi-widget .lumi-panel-header{padding:12px;display:flex;align-items:center;gap:10px;background:#eaf0e6;border-radius:18px 18px 0 0}
+.cita-portal .lumi-widget .lumi-panel-body{padding:15px}
+.cita-portal .lumi-widget .lumi-icon-btn{cursor:pointer}
+</style>
+    <link rel="stylesheet" href="portada.css?v=2">
+  <link rel="stylesheet" href="lumi.css?v=8">
   <title>Cita con la Vida – Trelew | Estamos acá para vos</title>
 </head>
 <body class="cita-portal">
@@ -155,7 +193,25 @@ img{max-width:100%;height:auto}
     </main>
     <footer class="portal-footer"><a href="comunidad.html">Visitar la web completa <span aria-hidden="true">↗</span></a><span>© <span id="year">2026</span> Cita con la Vida – Trelew</span><span>Hecho con fe, comunidad y esperanza.</span></footer>
   </div>
+
+  <!-- Lumi de respaldo: funciona sin JS, con tap y teclado. JS la reemplaza solo si el widget se inició. -->
+  <details id="lumi-home-fallback" class="lumi-home-fallback" aria-label="Lumi, acompañante de Cita con la Vida">
+    <summary aria-label="Abrir o cerrar las opciones de Lumi">
+      <span class="lumi-home-hint">¡Hola! Soy Lumi. ¿Jugamos? ✨</span>
+      <img src="https://gcdn.picsart.com/picsart-mcp/81dbfa93-12fe-4f3b-98a0-89cafc6671b2.png" alt="Lumi, mascota de la iglesia" width="84" height="86">
+    </summary>
+    <div class="lumi-fallback-panel">
+      <h2>¡Hola, soy Lumi! 💛</h2>
+      <p>¿Qué te gustaría hacer? Estoy acá para acompañarte.</p>
+      <a href="devocional.html">☀ Leer el devocional de hoy ↗</a>
+      <a href="juegos.html#espadeo">⚔ Jugar Espadeo Bíblico ↗</a>
+      <a href="juegos.html#adivina">🔍 Lumi adivina personajes ↗</a>
+      <a href="oracion.html">♡ Dejar un motivo de oración ↗</a>
+      <a href="comunidad.html#mensajes">▤ Leer las prédicas ↗</a>
+    </div>
+  </details>
+
   <script src="portada.js?v=1" defer></script>
-  <script src="lumi.js?v=7" defer></script>
+  <script src="lumi.js?v=8" defer></script>
 </body>
 </html>
