@@ -16,7 +16,7 @@ Sitio institucional inicial para la comunidad de la iglesia Cita con la Vida, Tr
 ## Información que debe verificar la iglesia antes de publicar como sitio definitivo
 
 - Confirmar **URL oficial de Facebook**. La URL de share proporcionada no pudo consultarse automáticamente y se utiliza temporalmente como vínculo.
-- Reemplazar el símbolo gráfico provisional por el **logo oficial**.
+- **Logo oficial incorporado** al encabezado, al pie y a la pestaña del navegador, a partir de la fotografía original enviada por la iglesia (recortada y preparada sobre transparencia).
 - Añadir **fotos auténticas de la comunidad** autorizadas para publicar (no se inventaron fotos ni se usaron imágenes de otras congregaciones).
 - Confirmar **dirección exacta, mapa y horarios**. No se incluyen datos antiguos ni horarios no verificados.
 - Confirmar textos institucionales y los títulos de prédicas: “Mantené tu fe ardiendo”, “Fructificar en el desierto” y “El poder del equipo” corresponden a títulos compartidos previamente en la preparación de contenidos de la iglesia, pero deben enlazarse a sus publicaciones oficiales.
@@ -43,3 +43,7 @@ No hay herramientas de seguimiento ni cookies, no hay compilación obligatoria y
 - La foto del afiche de Santa Cena es material histórico, no una convocatoria actual.
 - Facebook se enlaza mediante la URL compartida más recientemente por el usuario.
 - El símbolo circular del encabezado sigue siendo provisional. Dirección y horarios se mantienen pendientes de confirmación.
+
+## Identidad visual oficial
+
+En noviembre de 2026 se sustituyó el distintivo genérico anterior por el logo oficial en negro (encabezado) y blanco (pie), sin redibujarlo ni modificar sus letras. También se cambió el favicon. Las variantes recortadas están guardadas en Picsart Drive, con enlaces duraderos desde el sitio.
