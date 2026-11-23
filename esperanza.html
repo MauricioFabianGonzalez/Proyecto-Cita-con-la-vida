@@ -83,38 +83,21 @@
         <div><div class="eyebrow">Sumate a esta obra</div><h2 id="join-title" class="section-heading">Cada ofrenda ayuda a preparar lugar para alguien más.</h2><p class="section-intro">No hay una cantidad obligatoria. Compartí la campaña con alguien más, orá por la obra o coordiná una ofrenda de materiales.</p>
           <div class="details">
             <div class="detail"><b>Proveedor de acopio</b><span>Perrén y Cía. · Trelew</span></div>
-            <div class="detail"><b>Referencia del proyecto</b><span>Cuenta de acopio N.º 86009 · Titular informado: Mauricio Gonzáles</span></div>
-            <div class="detail"><b>Coordinación de ofrendas</b><span>WhatsApp: +54 9 280 497-6659</span></div>
+            <div class="detail"><b>Referencia del proyecto</b><span>Los datos de acopio se informarán únicamente por los canales oficiales de la iglesia, una vez confirmados.</span></div>
+            <div class="detail"><b>Coordinación de ofrendas</b><span>Canal de contacto en preparación. Por seguridad, no se muestran teléfonos personales.</span></div>
           </div>
         </div>
         <div class="join-box">
-          <label for="bags">¿Por cuántas bolsas te gustaría consultar?</label>
-          <select id="bags" name="bags"><option value="1">1 bolsa</option><option value="2">2 bolsas</option><option value="3">3 bolsas</option><option value="5">5 bolsas</option><option value="10">10 bolsas</option><option value="20">20 bolsas</option><option value="other">Otra cantidad o consulta</option></select>
-          <p class="quantity" id="bags-description" aria-live="polite">1 bolsa equivale a 25 kg de cemento para la meta inicial.</p>
-          <a id="contact-whatsapp" class="button" target="_blank" rel="noopener noreferrer" href="https://wa.me/5492804976659?text=Hola%2C%20quiero%20consultar%20c%C3%B3mo%20sumarme%20a%20Un%20M%C2%B3%20de%20Esperanza%20con%20una%20ofrenda%20equivalente%20a%201%20bolsa%20de%20cemento.%20%C2%BFMe%20confirman%20el%20valor%20actual%20y%20la%20cuenta%20de%20acopio%3F">Coordinar mi ofrenda por WhatsApp ↗</a>
-          <small>Este sitio <strong>no recibe pagos</strong> ni registra ofrendas. El botón abre WhatsApp con un mensaje preparado; consultá allí el precio actualizado y los datos de acopio antes de realizar cualquier aporte. La cifra de $8.900 por bolsa correspondía a mayo de 2026 y no se publica como precio vigente.</small>
+          <h3 style="font:800 23px/1.3 var(--font);margin:0 0 14px">¿Querés sumarte?</h3>
+          <p>Estamos preparando un canal oficial para recibir consultas y coordinar las ofrendas de <strong>Un M³ de Esperanza</strong>.</p>
+          <p>Por ahora, podés conocer el proyecto, compartirlo y acompañarlo en oración. Próximamente publicaremos el contacto y las indicaciones definitivas para participar.</p>
+          <p class="status"><strong>Por seguridad:</strong> no se solicitan pagos ni se publican teléfonos personales o datos de acopio hasta su confirmación oficial.</p>
         </div>
       </div>
     </section>
     <section class="closing"><div class="wrap"><blockquote>«Un espacio más. Una familia más. Una vida más».</blockquote><p>Gracias por orar, acompañar y ser parte de la familia de Cita con la Vida · Trelew.</p><div class="actions" style="justify-content:center"><a class="button button-gold" href="index.html">Conocé nuestra iglesia ↗</a><a class="button" style="border:1px solid #9db5a2" href="https://wa.me/?text=Sumate%20a%20Un%20M%C2%B3%20de%20Esperanza%20de%20Cita%20con%20la%20Vida%20Trelew%3A%20https%3A%2F%2Fmauriciofabiangonzalez.github.io%2FProyecto-Cita-con-la-vida%2Fesperanza.html" target="_blank" rel="noopener noreferrer">Compartir campaña ↗</a></div></div></section>
   </main>
   <footer class="footer"><div class="wrap"><span>© <span id="year">2026</span> Cita con la Vida · Trelew</span><a href="index.html">Ir a la página principal ↑</a></div></footer>
-  <script>
-    'use strict';
-    document.getElementById('year').textContent=new Date().getFullYear();
-    const bags=document.getElementById('bags');
-    const description=document.getElementById('bags-description');
-    const contact=document.getElementById('contact-whatsapp');
-    bags.addEventListener('change',()=>{
-      const value=bags.value;
-      const message=value==='other'
-        ? 'Hola, quiero consultar cómo sumarme a Un M³ de Esperanza de Cita con la Vida Trelew. ¿Me confirman los valores y los datos actualizados del acopio?'
-        : 'Hola, quiero consultar cómo sumarme a Un M³ de Esperanza con una ofrenda equivalente a '+value+' bolsa'+(value==='1'?'':'s')+' de cemento. ¿Me confirman el valor actual y la cuenta de acopio?';
-      description.textContent=value==='other'
-        ? 'Consultá cualquier cantidad o modalidad con el equipo.'
-        : value+' bolsa'+(value==='1'?'':'s')+' equivalen a '+(Number(value)*25)+' kg de cemento para la meta inicial.';
-      contact.href='https://wa.me/5492804976659?text='+encodeURIComponent(message);
-    });
-  </script>
+  <script>document.getElementById('year').textContent=new Date().getFullYear();</script>
 </body>
 </html>
