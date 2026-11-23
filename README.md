@@ -50,3 +50,38 @@ El primer despliegue o una actualización pueden tardar en reflejarse en el siti
 ## Privacidad y accesibilidad
 
 La web no utiliza sistemas de rastreo propios. La mascota no graba, no escucha y no envía datos. El formulario de oración no guarda pedidos en un repositorio. Se incluyen enlaces con etiquetas, teclado y opción de reducir animaciones. El 3D se degrada a 2D si la capacidad gráfica es insuficiente.
+
+
+## Juegos bíblicos con Lumi — noviembre de 2026
+
+La página **[Jugá con Lumi](juegos.html)** reúne dos minijuegos gratuitos:
+
+### Espadeo Bíblico
+- Banco editorial de **300 preguntas diferentes** repartidas en 15 temas, con referencia bíblica y 4 opciones para cada pregunta.
+- Selección aleatoria de **10 preguntas por partida**, sin preguntas repetidas dentro de una ronda; el mazo se consume sin repetir entre rondas hasta agotarse.
+- Corrección inmediata, referencia para consultar la Biblia, revisión de todas las respuestas, puntaje de 0–10 y frases simpáticas según el resultado.
+- Permite volver a jugar y compartir resultados mediante las funciones del navegador.
+
+### Lumi adivina
+- Colección inicial de **97 personajes** y **63 características/preguntas**.
+- Motor de deducción local: pregunta progresivamente, pondera sí/no/probablemente y permite «no sé» o volver atrás.
+- Ofrece una primera hipótesis y puede seguir descartando opciones si la respuesta es negativa.
+- **No siempre puede adivinar:** solo contempla su colección actual y depende de las pistas. No tiene IA conectada, no lee pensamientos ni envía respuestas a ningún servicio.
+- Las pistas de los personajes muestran referencias bíblicas.
+
+### Código y mantenimiento
+- \`juegos.html\`: interfaz.
+- \`juegos.css\`: diseño responsive y accesibilidad.
+- \`juegos.js\`: selección, puntuación, estados y motor de deducción.
+- \`juego-preguntas-1.js\`, \`juego-preguntas-2.js\`, \`juego-preguntas-3.js\`: 100 preguntas en cada archivo.
+- \`juego-personajes.js\`: personajes y rasgos de deducción.
+
+No hay clasificación de usuarios, competencia, dinero, anuncios ni almacenamiento de las respuestas. Las preguntas se pueden editar sin modificar el motor de juego. Los textos son para enseñanza recreativa; se recomienda contrastar todas las referencias con la traducción bíblica usada por la comunidad.
+
+### Comprobaciones efectuadas
+- Total de preguntas: 300, todas con 4 alternativas diferentes y referencia.
+- Sin preguntas duplicadas por texto; 15 temas con 20 preguntas cada uno.
+- Datos de personajes: 97 personajes, 63 rasgos y sin fichas de rasgos idénticas.
+- En simulaciones con respuestas ideales, el adivinador identificó 97 de 97 personajes de su propia colección.
+- JavaScript analizado sintácticamente. **La prueba visual en dispositivos y la publicación de GitHub Pages deben confirmarse en navegador real.**
+
