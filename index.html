@@ -19,7 +19,46 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="portada.css?v=1">
+  <style>
+/* Estilos mínimos de respaldo: la portada sigue legible si falla el CSS externo. */
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:#eef0e9;color:#263e31;font-family:system-ui,-apple-system,sans-serif}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;height:auto}
+.cita-portal .portal-container{position:relative;width:min(690px,calc(100% - 24px));margin:auto;padding:14px 0 32px}
+.cita-portal .profile{text-align:center;background:#173628;color:#fff;border-radius:19px;padding:0 0 22px;overflow:hidden}
+.cita-portal .profile-cover{position:relative;height:165px;background:#224635}
+.cita-portal .profile-cover img{width:100%;height:100%;object-fit:cover}
+.cita-portal .cover-label{position:absolute;right:14px;top:14px;background:#193c2db8;padding:7px 10px;border-radius:20px;color:#fff}
+.cita-portal .profile-badge{width:92px;height:92px;margin:-45px auto 5px;border-radius:50%;position:relative;display:grid;place-items:center;background:#fff;border:4px solid #f4eede;overflow:hidden}
+.cita-portal .profile-badge img{width:90%;height:90%;object-fit:contain}
+.cita-portal .profile h1{font-size:clamp(32px,8vw,49px);margin:8px 0}
+.cita-portal .profile h1 em{color:#f1c49a;font-style:normal}
+.cita-portal .profile-description{max-width:560px;margin:12px auto;padding:0 18px}
+.cita-portal .social-strip{display:flex;justify-content:center;gap:9px;flex-wrap:wrap}
+.cita-portal .social-button{display:inline-flex;gap:7px;align-items:center;border:1px solid #c5d5c5;padding:9px 14px;border-radius:28px;background:transparent;color:#fff}
+.cita-portal .links-group{margin:27px 0}
+.cita-portal .section-head{display:flex;gap:11px;align-items:center;margin:0 5px 12px}
+.cita-portal .section-head h2{font-size:20px;margin:0}
+.cita-portal .section-head p{font-size:12px;color:#687b6d;margin:3px 0 0}
+.cita-portal .section-number{background:#dfe9df;border-radius:10px;padding:9px}
+.cita-portal .link-stack{display:grid;gap:10px}
+.cita-portal .link-card{display:flex;align-items:center;gap:12px;padding:12px;background:#fffdf8;border:1px solid #dce4d8;border-radius:14px;min-height:76px}
+.cita-portal .link-card.primary{background:#244b35;color:#fff}
+.cita-portal .card-media{display:grid;place-items:center;width:51px;height:51px;flex:0 0 51px;overflow:hidden;border-radius:10px;background:#dfe9df;font-size:26px;color:#31533b}
+.cita-portal .card-media img{width:100%;height:100%;object-fit:cover}
+.cita-portal .card-label{flex:1}
+.cita-portal .card-label strong{display:block;font-size:14px}
+.cita-portal .card-label small{display:block;margin-top:4px;font-size:11px;opacity:.8}
+.cita-portal .card-arrow{font-size:20px}
+.cita-portal .closing-card{display:flex;align-items:center;gap:15px;padding:20px;border-radius:16px;background:#e1ecd9}
+.cita-portal .closing-card img{max-width:90px}
+.cita-portal .portal-footer{padding:25px;text-align:center;font-size:12px;display:grid;gap:8px}
+.cita-portal .skip-link{position:absolute;top:-200px}
+.cita-portal .skip-link:focus{top:5px}
+</style>
+  <link rel="stylesheet" href="portada.css?v=2">
   <link rel="stylesheet" href="lumi.css?v=5">
   <title>Cita con la Vida – Trelew | Estamos acá para vos</title>
 </head>
