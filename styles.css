@@ -64,3 +64,11 @@
 @media(max-width:860px){.hero-layout{grid-template-columns:1fr;gap:0}.hero-photo{height:450px;margin:5px 0 46px}.pastors-grid{grid-template-columns:1fr 1fr}.sermons-layout-updated{grid-template-columns:1fr}.sermon-photo{display:none}.gallery-grid{grid-template-columns:repeat(3,minmax(0,1fr))}.gallery-wide{grid-column:span 2}}
 @media(max-width:620px){.hero-photo{height:350px;margin:18px 0 36px}.hero-photo figcaption{font-size:8px}.intro-photo{width:70%;max-height:185px}.feature-art{flex-basis:245px}.feature-card{min-height:430px}.pastors-grid{grid-template-columns:1fr}.pastor-card{grid-template-columns:42% 58%;min-height:250px}.pastor-card img{height:100%;min-height:250px}.pastor-card>div{padding:20px 14px}.pastor-card h3{font-size:20px}.pastor-card p{font-size:12px}.sermon-title strong{font-size:17px}.sermon-detail summary{gap:10px;grid-template-columns:24px 1fr 20px}.sermon-content{padding-left:34px;padding-right:4px}.gallery-grid{grid-template-columns:1fr 1fr;gap:10px}.gallery-item{min-height:175px}.gallery-wide{min-height:360px}.gallery-item figcaption{font-size:10px}.visit-photo-overlay{height:370px}}
 @media(prefers-reduced-motion:reduce){.feature-photo,.gallery-item img,.sermon-plus{transition:none}}
+
+/* Identidad oficial Cita con la Vida · Trelew: marca gráfica real, sin cruz genérica */
+.brand{gap:0;align-items:center}
+.header-inner{height:96px}
+.brand-logo{display:block;width:188px;height:94px;max-width:none;object-fit:contain;object-position:left center}
+.footer-brand .brand-logo{width:225px;height:125px}
+@media(max-width:860px){.header-inner{height:84px}.brand-logo{width:165px;height:83px}}
+@media(max-width:620px){.header-inner{height:78px}.brand-logo{width:143px;height:75px}.footer-brand .brand-logo{width:195px;height:110px}}
