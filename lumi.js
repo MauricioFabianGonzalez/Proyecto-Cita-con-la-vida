@@ -41,6 +41,8 @@
           '<a class="lumi-action lumi-action-primary" href="devocional.html"><span>Leer el devocional de hoy</span><span aria-hidden="true">↗</span></a>',
           '<a class="lumi-action lumi-action-secondary" href="oracion.html"><span>Dejar un motivo de oración</span><span aria-hidden="true">♡</span></a>',
           '<a class="lumi-action lumi-action-tertiary" href="index.html#mensajes"><span>Explorar las prédicas</span><span aria-hidden="true">→</span></a>',
+          '<a class="lumi-action lumi-action-play" href="juegos.html#espadeo"><span>⚔️ ¡Te desafío al espadeo!</span><span aria-hidden="true">↗</span></a>',
+          '<a class="lumi-action lumi-action-play" href="juegos.html#adivina"><span>🔍 Pensá en un personaje</span><span aria-hidden="true">↗</span></a>',
         '</div>',
         '<button type="button" class="lumi-later" data-lumi-action="min">Ahora no, gracias</button>',
       '</div>',
@@ -58,6 +60,12 @@
   const panel = container.querySelector('#lumi-panel');
   const toggle = container.querySelector('#lumi-toggle');
   const message = container.querySelector('#lumi-message');
+  const onGamesPage = window.location.pathname.endsWith('/juegos.html');
+  if (onGamesPage) {
+    message.textContent = '¡Bienvenido a mis juegos! Estoy listo para ponerte a prueba. 😄';
+    const question = container.querySelector('.lumi-question');
+    if (question) question.textContent = '¿Espadeo o adivinanza? ¡Vos elegís!';
+  }
   const reducedMotion = window.matchMedia
     ? window.matchMedia('(prefers-reduced-motion: reduce)')
     : { matches: false };
@@ -128,7 +136,7 @@
 
   toggle.addEventListener('click', () => {
     if (panel.hidden) {
-      message.textContent = '¡Qué bueno verte! ¿Querés leer el devocional o dejar un motivo de oración?';
+      message.textContent = onGamesPage ? '¡Otra ronda juntos! ¿Qué juego te gustaría probar?' : '¡Qué bueno verte! ¿Querés leer el devocional o dejar un motivo de oración?';
       showPanel();
     } else {
       minimizePanel();
