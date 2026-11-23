@@ -224,3 +224,6 @@
 }
 @media(max-width:360px){.quiz-mode-grid{grid-template-columns:1fr}}
 @media(prefers-reduced-motion:reduce){.quiz-mode-option{transition:none}}
+
+/* Destinos reales de #espadeo y #adivina para enlaces compartidos. */
+.game-hash-anchor{display:block;height:0;scroll-margin-top:18px}
