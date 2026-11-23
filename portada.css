@@ -1,0 +1,135 @@
+/* PORTADA · Cita con la Vida – Trelew
+ * Inspiración: estructura de perfil, grupos y tarjetas de un Linktree de iglesia.
+ * Diseño original, con logo y fotografías de nuestra congregación.
+ */
+:root{
+  --green:#173628;--green2:#244c37;--forest:#102c22;--sage:#dfe9df;
+  --mint:#eef4ec;--paper:#fffdf8;--background:#eef0e9;--text:#253d30;
+  --muted:#677b6c;--line:#dbe5d9;--peach:#e9b48d;--warm:#af7f5d;
+  --font:'Manrope',system-ui,sans-serif;--body:'DM Sans',system-ui,sans-serif
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;color:var(--text);font-family:var(--body);background:linear-gradient(180deg,#e5e9df 0,#f3f2ed 690px,#eeefe8 100%);-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+button{font:inherit}
+img{max-width:100%;height:auto}
+[hidden]{display:none!important}
+::selection{background:#efd2b0;color:#122b21}
+.skip-link{position:absolute;top:-80px;left:12px;z-index:150;background:#fff;padding:12px 16px;border-radius:7px;color:var(--green)}
+.skip-link:focus{top:12px}
+.cita-portal{position:relative;min-height:100dvh;overflow-x:hidden}
+.cita-portal::before{content:"";height:510px;background:linear-gradient(145deg,#113d2a 0%,#17392d 48%,#274c36 100%);position:absolute;inset:0 0 auto;pointer-events:none}
+.ambient-light{position:absolute;pointer-events:none;border-radius:50%;filter:blur(60px);opacity:.32}
+.ambient-one{width:370px;height:370px;top:110px;left:-170px;background:#a9b7a2}
+.ambient-two{width:280px;height:280px;top:90px;right:-120px;background:#a46d42}
+.portal-container{width:min(100% - 30px,690px);margin:0 auto;position:relative;z-index:1;padding:22px 0 25px}
+
+.profile{position:relative}
+.profile-cover{border-radius:24px 24px 18px 18px;overflow:hidden;position:relative;height:205px;background:#24412f;box-shadow:0 18px 48px #0b251b52;border:1px solid #ffffff2d}
+.profile-cover img{display:block;width:100%;height:100%;object-fit:cover;object-position:center 43%;filter:saturate(.97) contrast(1.06)}
+.profile-cover::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,#0e281c15 7%,transparent 40%,#102c23c4 100%);pointer-events:none}
+.cover-label{position:absolute;z-index:1;right:18px;top:16px;display:inline-flex;align-items:center;padding:8px 12px;border:1px solid #ffffff69;border-radius:99px;color:#fff;font:800 10px/1.2 var(--font);letter-spacing:.14em;backdrop-filter:blur(12px);background:#153a29a3}
+.profile-information{display:flex;align-items:center;flex-direction:column;text-align:center;padding:0 18px}
+.profile-badge{position:relative;z-index:3;margin-top:-57px;width:113px;height:113px;border-radius:50%;display:grid;place-items:center;background:#f9f6ed;border:5px solid #f3f0e9;box-shadow:0 8px 25px #152b1d40;overflow:hidden}
+.profile-badge img{display:block;width:100%;height:100%;padding:9px;object-fit:contain}
+.profile-eyebrow{color:#bfd3bf;font:800 10px/1.5 var(--font);letter-spacing:.16em;margin:14px 0 0;display:flex;align-items:center;gap:8px}
+.profile-eyebrow span{color:#edbb8f;font-size:18px}
+.profile h1{font:800 clamp(36px,6vw,54px)/1.05 var(--font);letter-spacing:-.065em;margin:9px 0 4px;color:#fff}
+.profile h1 em{font-style:normal;color:#f3c59f}
+.profile-tagline{font:800 16px/1.5 var(--font);margin:10px 0 6px;color:#fff}
+.profile-tagline span{color:#f1bd95}
+.profile-description{color:#d6e3d8;font:500 14px/1.7 var(--body);max-width:530px;margin:7px auto 18px}
+.profile-description strong{color:#fff}
+.social-strip{display:flex;align-items:center;justify-content:center;gap:9px;flex-wrap:wrap;max-width:510px}
+.social-button{border:1px solid #dce8d465;border-radius:99px;background:#ffffff23;backdrop-filter:blur(13px);color:#fff;display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:10px 17px;min-height:43px;min-width:125px;cursor:pointer;font:800 12px var(--font);transition:background .18s,transform .18s}
+.social-button:hover{transform:translateY(-2px);background:#ffffff35}
+.social-button svg{flex:0 0 auto}
+.share-status{min-height:18px;margin:8px 0 0;color:#d8e9d7;font-size:12px}
+
+#enlaces{padding-top:27px}
+.links-group{margin:19px 0 31px}
+.section-head{display:flex;align-items:center;gap:15px;margin:0 4px 15px}
+.section-number{width:37px;height:37px;flex:0 0 37px;display:grid;place-items:center;border-radius:12px;background:#dde8dd;color:#3e6650;border:1px solid #cddccb;font:800 11px/1 var(--font)}
+.section-head h2{margin:0 0 3px;font:800 21px/1.3 var(--font);letter-spacing:-.045em;color:#234032}
+.section-head p{margin:0;color:#788878;font:500 12px/1.5 var(--body)}
+.link-stack{display:grid;gap:11px}
+.link-card{display:flex;align-items:center;gap:14px;background:var(--paper);border:1.5px solid #dde4d8;border-radius:16px;min-height:86px;padding:13px 16px;box-shadow:0 9px 26px #2445310b;transition:transform .18s,box-shadow .18s,border-color .18s,background .18s}
+.link-card:hover{transform:translateY(-3px);border-color:#95b29a;box-shadow:0 15px 30px #24453121;background:#fff}
+.link-card:focus-visible,.social-button:focus-visible,.portal-footer a:focus-visible{outline:3px solid #d49366;outline-offset:4px}
+.card-media{width:58px;height:58px;flex:0 0 58px;border-radius:12px;display:grid;place-items:center;overflow:hidden;background:#e7eee2;isolation:isolate;color:#476750}
+.card-media img{width:100%;height:100%;object-fit:cover;display:block}
+.icon-art{font:800 33px/1 var(--font);background:linear-gradient(135deg,#eef2e8,#e1e9dd)}
+.card-label{flex:1;min-width:0}
+.card-label strong{display:block;font:800 15px/1.4 var(--font);color:#263e2f;letter-spacing:-.02em}
+.card-label small{display:block;font:500 12px/1.5 var(--body);color:#718174;margin-top:4px}
+.card-arrow{font-size:22px;font-weight:500;color:#a57858;align-self:center;flex:0 0 auto;margin-left:6px}
+.link-card.primary{background:#244b35;border-color:#244b35;color:#fff;box-shadow:0 12px 28px #1b462330}
+.link-card.primary:hover{background:#2c5a40;border-color:#2c5a40}
+.primary .card-label strong{color:#fff}
+.primary .card-label small{color:#e0e9db}
+.primary .card-media{background:#ffffff23;color:#f2d6bb}
+.primary .card-arrow{color:#f4cba7}
+.mini-tag{display:block;color:#a87853;font:800 9px/1.2 var(--font);letter-spacing:.12em;margin-bottom:4px}
+.link-card.featured-devotional{background:#fff9ec;border-color:#ead9bf}
+.featured-devotional .card-media{background:#f0e8c8}
+.link-card.game-highlight{background:#f2f5ea;border-color:#ccdcbf}
+.game-highlight .card-media{background:#e7edd7}
+.lumi-avatar img{object-fit:contain;width:95%;height:95%}
+.closing-card{margin-top:22px;display:flex;align-items:center;gap:15px;padding:25px 24px;min-height:166px;border-radius:20px;border:1px solid #b5cbb6;background:radial-gradient(circle at 90% 30%,#98b29658,transparent 45%),linear-gradient(125deg,#dcebdd,#f6efe4);box-shadow:0 9px 27px #2646330d}
+.closing-card>div{flex:1}
+.closing-kicker{color:#9a7153;letter-spacing:.16em;font:800 10px var(--font)}
+.closing-card h2{font:800 26px/1.2 var(--font);letter-spacing:-.05em;margin:8px 0;color:#284333}
+.closing-card h2 em{color:#a77957;font-style:normal}
+.closing-card p{color:#617865;font:500 12px/1.7 var(--body);margin:0;max-width:360px}
+.closing-card img{width:115px;height:130px;object-fit:contain;filter:drop-shadow(0 8px 11px #344d1d25)}
+.portal-footer{display:flex;flex-direction:column;text-align:center;align-items:center;gap:8px;padding:29px 10px 13px;color:#879486;font-size:11px;line-height:1.6}
+.portal-footer a{color:#2e5a3d;font:800 13px/1.7 var(--font);border-bottom:1px solid #83a58a;padding:4px 2px 7px;margin-bottom:8px}
+.portal-footer a:hover{color:#a47553}
+@media(max-width:760px){
+  .portal-container{width:min(100% - 24px,630px);padding-top:13px}
+  .profile-cover{height:185px;border-radius:17px}
+  .profile-information{padding-inline:10px}
+  .profile-badge{width:105px;height:105px;margin-top:-52px}
+  .profile h1{font-size:clamp(37px,8vw,47px)}
+  .profile-description{font-size:13px}
+  .links-group{margin-bottom:27px}
+}
+@media(max-width:450px){
+ .cita-portal::before{height:480px}
+ .portal-container{width:calc(100% - 20px)}
+ .profile-cover{height:146px;border-radius:16px}
+ .cover-label{font-size:8px;right:10px;top:11px;padding:6px 8px}
+ .profile-badge{width:90px;height:90px;margin-top:-45px;border-width:4px}
+ .profile-eyebrow{font-size:9px;margin-top:10px}
+ .profile h1{font-size:37px}
+ .profile-tagline{font-size:14px}
+ .profile-description{font-size:12px;line-height:1.7;margin:4px 0 13px}
+ .social-strip{gap:6px}
+ .social-button{min-width:0;flex:0 0 auto;padding:9px 10px;font-size:10px;min-height:39px}
+ .social-button svg{width:17px;height:17px}
+ #enlaces{padding-top:17px}
+ .section-head{gap:10px;margin-bottom:10px}
+ .section-number{width:32px;height:32px;flex-basis:32px;border-radius:10px}
+ .section-head h2{font-size:18px}
+ .section-head p{font-size:11px}
+ .link-stack{gap:9px}
+ .link-card{min-height:77px;padding:10px 11px;gap:10px;border-radius:13px}
+ .card-media{width:50px;height:50px;flex-basis:50px;border-radius:10px}
+ .icon-art{font-size:27px}
+ .card-label strong{font-size:13px}
+ .card-label small{font-size:10.5px}
+ .card-arrow{font-size:18px;margin-left:1px}
+ .mini-tag{font-size:8px}
+ .closing-card{padding:15px;gap:5px;border-radius:14px}
+ .closing-card h2{font-size:21px}
+ .closing-card img{width:78px;height:95px}
+}
+@media(min-width:1050px){
+ .portal-container{padding-top:32px}
+ .profile-cover{height:240px}
+}
+@media(prefers-reduced-motion:reduce){
+ html{scroll-behavior:auto}
+ .link-card,.social-button{transition:none}
+}
