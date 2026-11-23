@@ -1,0 +1,67 @@
+/* Páginas dedicadas: devocional y buzón de oración */
+:root{--paper:#f9f7f1;--forest:#172b21;--warm:#e1a77f;--soft:#e8ece5}
+html{scroll-behavior:smooth}body{background:var(--paper)}
+.inner-shell{width:min(100% - 44px,1080px);margin:auto}
+.content-header{background:#f9f7f1;border-bottom:1px solid #e2e4dc;position:sticky;top:0;z-index:25}
+.content-nav{display:flex;align-items:center;justify-content:space-between;gap:18px;min-height:94px}
+.content-logo{display:inline-flex;align-items:center}
+.content-logo img{height:75px;width:165px;object-fit:contain;object-position:left center}
+.content-links{display:flex;gap:22px;align-items:center;flex-wrap:wrap}
+.content-links a{font:700 12px 'Manrope',sans-serif;color:#344b3b;padding:10px}
+.content-links a:hover,.content-links a:focus-visible{color:#bf784c}
+.content-links a.active{border-bottom:2px solid #ca8861}
+.inner-hero{padding:76px 0 55px;background:radial-gradient(circle at 91% 10%,#e7c8a465,transparent 41%),linear-gradient(115deg,#e9eee5,#faf8f2)}
+.inner-hero .eyebrow{color:#9b644c}
+.inner-hero h1{font:800 clamp(43px,6vw,80px)/1.1 'Manrope',sans-serif;letter-spacing:-.067em;color:#1b3026;margin:20px 0}
+.inner-hero h1 em{font-style:normal;color:#bd8668}
+.inner-hero p{font-size:17px;line-height:1.75;color:#566a5c;max-width:690px;margin:0}
+.inner-main{padding:58px 0 112px}
+.reading-layout{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(240px,.68fr);gap:38px;align-items:start}
+.devotional-card,.prayer-card{background:#fff;border:1px solid #e2e5dd;box-shadow:0 18px 55px #26352b0c;border-radius:15px;padding:clamp(22px,4vw,49px)}
+.devotional-top{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;border-bottom:1px solid #dfe3db;padding-bottom:22px;margin-bottom:28px}
+.daily-tag{display:inline-flex;align-items:center;gap:8px;font:800 11px 'Manrope',sans-serif;letter-spacing:.13em;color:#925b40;text-transform:uppercase}
+.daily-tag:before{content:"✳";color:#c99268;font-size:20px}
+.daily-date{font:600 12px 'DM Sans',sans-serif;color:#657668;text-transform:capitalize}
+.devotional-card h2{font:800 clamp(29px,3.4vw,47px)/1.15 'Manrope',sans-serif;letter-spacing:-.05em;color:#1d3328;margin:0 0 14px}
+.devotional-reference{font-size:13px;font-weight:800;color:#a26849;margin:0 0 25px}
+.devotional-card p{font-size:16px;line-height:1.95;color:#45564b}
+.devotional-block{background:#f0f2e9;border-radius:10px;padding:23px 24px;margin:30px 0}
+.devotional-block h3,.devotional-action h3{font:800 17px 'Manrope',sans-serif;color:#304734;margin:0 0 10px}
+.devotional-block p,.devotional-action p{margin:0}
+.devotional-action{border-left:3px solid #d8a17a;padding:4px 0 4px 21px;margin:27px 0}
+.devotional-info{font-size:12px!important;line-height:1.7!important;color:#778378!important;border-top:1px solid #e4e7df;padding-top:22px}
+.reading-buttons,.daily-pagination{display:flex;flex-wrap:wrap;align-items:center;gap:12px;margin:24px 0}
+.reading-btn{border:0;background:#1a3426;color:#fff;border-radius:7px;font:800 12px 'Manrope',sans-serif;padding:15px 18px;cursor:pointer;text-decoration:none;display:inline-flex;align-items:center;justify-content:center;gap:9px;min-height:46px}
+.reading-btn:hover{background:#325440}
+.reading-btn.secondary{background:#f1e3d5;color:#49392d}
+.reading-btn.secondary:hover{background:#e8d3bb}
+.reading-btn:disabled{opacity:.4;cursor:not-allowed}
+.daily-pagination{justify-content:space-between}
+.devotional-sidebar{background:#1b3328;color:#f7f5eb;border-radius:14px;padding:28px;position:sticky;top:120px}
+.devotional-sidebar img{width:112px;height:112px;object-fit:contain;display:block;margin:0 auto 6px}
+.devotional-sidebar h3{font:800 24px 'Manrope',sans-serif;letter-spacing:-.04em;margin:12px 0}
+.devotional-sidebar p{line-height:1.85;font-size:14px;color:#cedbcc}
+.sidebar-link{display:flex;justify-content:space-between;gap:12px;align-items:center;border:1px solid #839a8777;padding:15px;border-radius:8px;font-weight:700;font-size:13px;margin:20px 0 0}
+.sidebar-link:hover{background:#ffffff12}
+.prayer-layout{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(240px,.7fr);gap:35px}
+.prayer-card h2{font:800 29px 'Manrope',sans-serif;letter-spacing:-.04em;margin:0 0 16px;color:#1f362a}
+.prayer-card>p{line-height:1.75;color:#526357}
+.field{margin:25px 0}
+.field label{display:block;font:800 13px 'Manrope',sans-serif;color:#294234;margin-bottom:9px}
+.field small{display:block;color:#74847a;margin-top:8px;font-size:12px;line-height:1.6}
+.field input,.field textarea,.field select{width:100%;border:1.5px solid #becdc0;border-radius:8px;background:#fffdfa;padding:13px 15px;color:#28372e;font:15px 'DM Sans',sans-serif}
+.field textarea{resize:vertical;min-height:180px;line-height:1.65}
+.field input:focus-visible,.field textarea:focus-visible,.field select:focus-visible{outline:3px solid #d8a17a66;border-color:#b57a52}
+.form-notice{padding:17px 20px;background:#eef3e9;border-left:3px solid #739a7d;border-radius:7px;margin:20px 0;font-size:14px;line-height:1.75;color:#294835}
+.form-notice[hidden],.prayer-copy[hidden]{display:none!important}
+.prayer-copy{width:100%;min-height:120px;margin-top:13px;border:1px solid #b7c9b7;padding:12px;border-radius:7px}
+.prayer-aside{background:#e7ebe3;padding:27px;border-radius:14px;align-self:start}
+.prayer-aside h3{font:800 23px 'Manrope',sans-serif;color:#2e4637;letter-spacing:-.04em}
+.prayer-aside p,.prayer-aside li{font-size:14px;line-height:1.85;color:#596c5c}
+.prayer-aside ul{padding-left:20px}
+.inner-footer{background:#15261c;color:#e7f0e5;padding:34px 0}
+.inner-footer .inner-shell{display:flex;flex-wrap:wrap;justify-content:space-between;gap:20px;align-items:center}
+.inner-footer img{width:153px;height:80px;object-fit:contain}
+.inner-footer p,.inner-footer a{font-size:12px;color:#c3d1c3}
+@media(max-width:860px){.reading-layout,.prayer-layout{grid-template-columns:1fr}.devotional-sidebar{position:static}.content-links{gap:7px}.content-nav{min-height:84px}.inner-main{padding:35px 0 95px}}
+@media(max-width:570px){.inner-shell{width:min(100% - 32px,1080px)}.content-logo img{width:133px;height:71px}.content-links a{font-size:11px;padding:6px}.content-links{gap:1px}.inner-hero{padding:53px 0 40px}.inner-hero p{font-size:15px}.devotional-card,.prayer-card{padding:21px}.devotional-card p{font-size:15px}.daily-pagination{gap:7px}.reading-btn{padding:13px 12px;font-size:11px}.devotional-sidebar{padding:22px}}
