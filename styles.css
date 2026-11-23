@@ -180,3 +180,27 @@ html{scroll-padding-top:112px}
 .games-teaser-note{position:absolute;z-index:3;bottom:15px;right:0;background:#fef9ec;color:#865d3e;border:1px solid #e5cbb3;border-radius:12px;padding:10px 16px;transform:rotate(-6deg);font:800 10px 'Manrope',sans-serif;letter-spacing:.11em}
 @media(max-width:960px){.games-teaser-layout{grid-template-columns:1fr .6fr;gap:15px}.games-teaser-actions{grid-template-columns:1fr}.games-teaser-orbit{width:235px;height:235px}.games-teaser-visual{min-height:270px}.games-teaser-visual>img{height:250px;width:230px}}
 @media(max-width:700px){.games-teaser{padding:68px 0}.games-teaser-layout{grid-template-columns:1fr;gap:16px}.games-teaser-copy h2{font-size:clamp(35px,9vw,50px)}.games-teaser-copy>p{font-size:14px}.games-teaser-actions{grid-template-columns:1fr}.games-teaser-link{min-height:68px}.games-teaser-visual{min-height:198px}.games-teaser-orbit{width:195px;height:195px}.games-teaser-visual>img{height:195px;width:200px}.games-teaser-note{right:16%;bottom:0}}
+
+
+/* Accesos rápidos · arquitectura de navegación inspirada en Linktree Camino de Vida */
+.portal-section{padding:39px 0 42px;background:#f0f1e8;border-bottom:1px solid #dce2d8}
+.portal-shell{max-width:1170px}
+.portal-heading{display:flex;align-items:end;justify-content:space-between;gap:30px;margin-bottom:20px}
+.portal-eyebrow{font:800 10px/1.5 'Manrope',sans-serif;letter-spacing:.18em;color:#ab7651}
+.portal-heading h2{font:800 clamp(28px,3.2vw,42px)/1.16 'Manrope',sans-serif;letter-spacing:-.058em;color:#233e30;margin:7px 0 8px}
+.portal-heading h2 em{font-style:normal;color:#aa7c56}
+.portal-heading p{font:500 13px/1.65 'DM Sans',sans-serif;color:#69806e;margin:0}
+.portal-all{display:inline-flex;align-items:center;gap:16px;white-space:nowrap;color:#2d5a3f;border-bottom:1px solid #82a38b;font:800 12px 'Manrope',sans-serif;padding:9px 0}
+.portal-all:hover{color:#a87552}
+.portal-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.portal-tile{display:flex;gap:13px;align-items:center;min-height:84px;background:#fffcf6;border:1px solid #d9e0d3;border-radius:13px;padding:15px 18px;box-shadow:0 8px 26px #2a4f2e0b;transition:transform .16s,border-color .16s,box-shadow .16s}
+.portal-tile:hover{transform:translateY(-2px);border-color:#94b59c;box-shadow:0 13px 27px #2a4f2e16}
+.portal-tile:focus-visible{outline:3px solid #b78760;outline-offset:3px}
+.portal-symbol{display:grid;place-items:center;flex:0 0 48px;width:48px;height:48px;border-radius:13px;background:#e8efe4;color:#53765d;font-size:26px}
+.portal-tile>span:nth-child(2){flex:1;min-width:0}
+.portal-tile strong{display:block;color:#2c4937;font:800 15px/1.4 'Manrope',sans-serif}
+.portal-tile small{display:block;color:#7a8b7d;font:500 11px/1.5 'DM Sans',sans-serif;margin-top:4px}
+.portal-arrow{color:#a9795b;font-size:20px}
+@media(max-width:790px){.portal-grid{grid-template-columns:1fr}.portal-heading{align-items:start;flex-direction:column;gap:5px}.portal-heading h2{font-size:36px}}
+@media(max-width:620px){.portal-section{padding:35px 0}.portal-heading h2{font-size:31px}.portal-tile{min-height:75px;padding:12px}.portal-symbol{width:43px;height:43px;flex-basis:43px;font-size:23px}.portal-tile strong{font-size:13px}.portal-tile small{font-size:10px}}
+@media(prefers-reduced-motion:reduce){.portal-tile{transition:none}}
