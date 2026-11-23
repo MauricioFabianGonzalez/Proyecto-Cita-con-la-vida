@@ -157,3 +157,36 @@ if('IntersectionObserver' in window){
     if(previousFocus)previousFocus.focus();
   });
 })();
+
+
+// Compartir un mensaje con su vínculo directo, sin trackers ni backend.
+(() => {
+  for (const button of document.querySelectorAll('.sermon-share')) {
+    button.addEventListener('click', async () => {
+      const card=button.closest('.sermon-detail');
+      if(!card)return;
+      const title=card.querySelector('.sermon-title strong')?.textContent.trim()||'Prédica';
+      const feedback=card.querySelector('.sermon-share-feedback');
+      const url=new URL(window.location.href);
+      url.hash=card.id;
+      const phrase='Una palabra para reflexionar desde Cita con la Vida · Trelew.';
+      const message=title+'\n'+phrase+'\n'+url.href;
+      try {
+        if(navigator.share){
+          await navigator.share({title:title+' — Cita con la Vida',text:phrase,url:url.href});
+          if(feedback)feedback.textContent='Gracias por compartir.';
+        } else if(navigator.clipboard?.writeText){
+          await navigator.clipboard.writeText(message);
+          if(feedback)feedback.textContent='Enlace copiado para compartir.';
+        } else {
+          window.prompt('Copiá el enlace de esta prédica:',url.href);
+          if(feedback)feedback.textContent='Enlace preparado.';
+        }
+      } catch(error) {
+        if(error?.name==='AbortError')return;
+        window.prompt('Copiá el enlace de esta prédica:',url.href);
+        if(feedback)feedback.textContent='Podés copiar el enlace.';
+      }
+    });
+  }
+})();
