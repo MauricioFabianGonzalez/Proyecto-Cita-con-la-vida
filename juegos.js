@@ -389,6 +389,7 @@
   let guessAttempts=0;
   let currentTrait=null;
   let currentGuess=null;
+  let retryPreviousTrait=null;
   const logo = (v) => Math.log(v);
   // Probabilidades suaves: una respuesta dudosa no descarta del todo a nadie.
   function scoreCandidates() {
@@ -466,11 +467,12 @@
     if(!ranked.length){showLost();return;}
     const top=ranked[0], runner=ranked[1];
     const confident=answers.length>=8 && top.probability>.82 && (!runner || top.score-runner.score>2);
-    const next=chooseTrait(ranked);
-    if(answers.length>=MAX_QUESTIONS || confident || !next){
+    const next=retryPreviousTrait||chooseTrait(ranked);
+    if(answers.length>=MAX_QUESTIONS || (confident&&!retryPreviousTrait) || !next){
       showGuess();return;
     }
     currentTrait=next;
+    retryPreviousTrait=null;
     show('guess-start',false);
     show('guess-final',false);
     show('guess-active',true);
@@ -486,7 +488,7 @@
     if(!chars.length||!traits.length){
       $('guess-start').append(byText('p','games-error','No se cargó la colección de personajes. Actualizá la página.'));return;
     }
-    answers=[];declined=new Set();guessAttempts=0;currentTrait=null;currentGuess=null;
+    answers=[];declined=new Set();guessAttempts=0;currentTrait=null;currentGuess=null;retryPreviousTrait=null;
     decideNext();
   }
   $('guess-begin').addEventListener('click',startGuessing);
@@ -500,8 +502,9 @@
   }
   $('guess-back').addEventListener('click',()=>{
     if(!answers.length)return;
-    answers.pop();
-    // Elegir la pregunta deshecha con prioridad para poder corregir su respuesta.
+    const previous=answers.pop();
+    // Repetimos exactamente la pregunta anterior para permitir corregirla.
+    retryPreviousTrait=traits.find(t=>t.id===previous.id)||null;
     decideNext();
   });
   $('guess-yes').addEventListener('click',()=>{
