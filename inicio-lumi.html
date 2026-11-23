@@ -100,7 +100,7 @@ img{max-width:100%;height:auto}
 
 
 /* El SVG de Lumi viaja dentro del HTML: se ve aunque fallen TODAS las imágenes o scripts externos. */
-body.cita-portal{overflow-x:visible!important}
+html{overflow-x:clip!important;width:100%!important}body.cita-portal{overflow-x:clip!important;width:100%!important;max-width:100%!important}
 body.cita-portal #lumi-home-fallback>summary .lumi-inline-art{
   display:block!important;position:absolute!important;inset:0!important;
   width:100%!important;height:100%!important;
@@ -190,9 +190,90 @@ body.cita-portal #lumi-home-fallback summary.lumi-3d-active>img{opacity:.22}
 
 
 </style>
-    <link rel="stylesheet" href="portada.css?v=2">
+    <link rel="stylesheet" href="portada.css?v=3">
   <link rel="stylesheet" href="lumi.css?v=10">
   <title>Prueba de Lumi | Cita con la Vida – Trelew</title>
+<style id="lumi-responsive-fix-v3">
+
+/* Ajuste definitivo de visibilidad y tamaños para Android, iOS y escritorio. */
+html,body.cita-portal{max-width:100%!important;overflow-x:clip!important}
+body.cita-portal .portal-container{width:min(690px,calc(100% - 24px))!important;max-width:calc(100% - 24px)!important;margin-inline:auto!important;min-width:0}
+body.cita-portal .profile,body.cita-portal .links-group,body.cita-portal .link-stack{max-width:100%!important;min-width:0}
+body.cita-portal .link-card{max-width:100%!important;min-width:0}
+body.cita-portal .link-card .card-label{min-width:0;overflow-wrap:break-word}
+body.cita-portal #lumi-home-fallback{
+ position:fixed!important;top:auto!important;left:auto!important;
+ right:max(10px,env(safe-area-inset-right,0px))!important;
+ bottom:max(12px,env(safe-area-inset-bottom,0px))!important;
+ width:88px!important;height:106px!important;min-width:0!important;
+ padding:0!important;margin:0!important;
+ transform:none!important;translate:none!important;
+ overflow:visible!important;pointer-events:auto!important;
+ z-index:2147483000!important;
+}
+body.cita-portal #lumi-home-fallback>summary{
+ position:relative!important;inset:auto!important;
+ width:88px!important;height:106px!important;
+ margin:0!important;padding:0!important;overflow:visible!important;
+ list-style:none!important;background:transparent!important;
+ display:block!important;cursor:pointer!important;
+}
+body.cita-portal #lumi-home-fallback>summary .lumi-inline-art,
+body.cita-portal #lumi-home-fallback>summary .lumi-original-art{
+ position:absolute!important;left:0!important;top:0!important;
+ width:88px!important;height:99px!important;
+ max-width:100%!important;pointer-events:none!important;
+}
+body.cita-portal #lumi-home-fallback>summary .lumi-inline-svg{
+ display:block!important;width:100%!important;height:100%!important;
+ max-width:100%!important;max-height:100%!important;
+}
+body.cita-portal #lumi-home-fallback>summary .lumi-original-art{
+ display:block;opacity:0;z-index:2;
+}
+body.cita-portal #lumi-home-fallback .lumi-home-label{
+ position:absolute!important;right:8px!important;left:auto!important;
+ bottom:0!important;top:auto!important;transform:none!important;
+ font-size:11px!important;padding:4px 9px!important;z-index:5!important;
+}
+body.cita-portal #lumi-home-fallback .lumi-home-hint{
+ position:absolute!important;right:0!important;left:auto!important;
+ bottom:calc(100% + 4px)!important;top:auto!important;
+ width:158px!important;max-width:calc(100vw - 24px)!important;
+ transform:none!important;white-space:normal!important;
+ overflow-wrap:break-word!important;box-sizing:border-box!important;
+ z-index:5!important;pointer-events:none!important;
+}
+body.cita-portal #lumi-home-fallback>.lumi-fallback-panel{
+ position:absolute!important;top:auto!important;left:auto!important;
+ right:0!important;bottom:calc(100% + 12px)!important;
+ width:min(350px,calc(100vw - 24px))!important;
+ max-width:calc(100vw - 24px)!important;
+ max-height:min(530px,calc(100dvh - 150px))!important;
+ box-sizing:border-box!important;overflow-x:hidden!important;overflow-y:auto!important;
+}
+@media(max-width:767px){
+ body.cita-portal .portal-container{width:calc(100% - 22px)!important;max-width:calc(100% - 22px)!important}
+ body.cita-portal .profile-cover{max-width:100%;width:100%}
+ body.cita-portal .profile-information{max-width:100%;min-width:0}
+ body.cita-portal .profile-description{font-size:clamp(12px,3.4vw,14px)!important;overflow-wrap:break-word}
+ body.cita-portal .social-strip{display:flex;flex-wrap:wrap;justify-content:center;max-width:100%}
+ body.cita-portal .social-strip .social-button{min-width:0;max-width:100%;flex-shrink:1}
+ body.cita-portal .link-card .card-label strong{font-size:clamp(12px,3.7vw,15px);overflow-wrap:anywhere}
+ body.cita-portal .link-card .card-label small{overflow-wrap:break-word}
+ body.cita-portal #lumi-home-fallback .lumi-home-hint{display:none!important}
+}
+@media(min-width:768px){
+ body.cita-portal .portal-container{width:min(760px,calc(100% - 70px))!important;max-width:calc(100% - 70px)!important}
+ body.cita-portal #lumi-home-fallback{right:max(22px,env(safe-area-inset-right,0px))!important;bottom:max(22px,env(safe-area-inset-bottom,0px))!important;width:108px!important;height:129px!important}
+ body.cita-portal #lumi-home-fallback>summary{width:108px!important;height:129px!important}
+ body.cita-portal #lumi-home-fallback>summary .lumi-inline-art,
+ body.cita-portal #lumi-home-fallback>summary .lumi-original-art{width:108px!important;height:120px!important}
+ body.cita-portal #lumi-home-fallback .lumi-home-hint{display:block}
+ body.cita-portal #lumi-home-fallback[open] .lumi-home-hint{display:none}
+}
+
+</style>
 </head>
 <body class="cita-portal">
   <a class="skip-link" href="#enlaces">Saltar a los enlaces</a>
