@@ -241,3 +241,30 @@ body.lumi-visible .to-top:not([hidden]) { right: 106px; }
   .lumi-widget .lumi-toggle::after { animation: none !important; }
   .lumi-toggle, .lumi-action { transition: none; }
 }
+
+
+/* Modelo 3D real: canvas WebGL por encima de la imagen, que queda como respaldo. */
+.lumi-toggle .lumi-3d-canvas {
+  position:absolute;
+  inset:0;
+  display:block;
+  width:100%;
+  height:100%;
+  pointer-events:none;
+  z-index:1;
+  opacity:0;
+  transition:opacity .25s ease;
+  background:transparent;
+}
+.lumi-toggle.lumi-3d-active .lumi-3d-canvas { opacity:1; }
+.lumi-toggle.lumi-3d-active > img {
+  opacity:0;
+  animation:none !important;
+}
+.lumi-toggle.lumi-3d-active { filter:drop-shadow(0 5px 8px rgba(75,51,29,.19)); }
+.lumi-toggle.lumi-3d-active .lumi-badge { z-index:2; }
+/* Las acciones y gestos se animan articuladamente en el espacio 3D, sin
+   mover de manera artificial todo el canvas como si fuera un sticker. */
+@media (prefers-reduced-motion: reduce) {
+  .lumi-toggle .lumi-3d-canvas { transition:none; }
+}
